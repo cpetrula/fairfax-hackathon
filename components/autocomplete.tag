@@ -8,10 +8,7 @@
         <table show={shown} ref="optionsList" cellspacing="0">
             <tr each="{item in shownItems}" tabindex="0"
                 onclick={onItemClicked} onkeydown={onItemKeyDown} onblur={onAnyBlur}>
-                <td>
-                    <strong>{item.name}</strong> <br/>
-                    <em>{item.description}</em>
-                </td>
+                <td>{item.name}</td>
             </tr>
             <tr if={shown && shownItems.length == 0}>
                 <td>{emptyText}</td>
@@ -171,11 +168,13 @@
                         console.log("Error searching items", err);
                         alert(err);
                     })
+            } else {
+                this.shown = false;
+                this.shownItems = [];
             }
 
             //update will happen later
             evt.preventUpdate = true;
-
         }
 
         selectItem(item) {
@@ -254,6 +253,10 @@
                 case 27: //27 == ESCAPE key
                     this.shown = false;
                     evt.preventDefault();
+                    break;
+                case 8:
+                case 13:
+                    this.onInput({})
                     break;
             }
         }
