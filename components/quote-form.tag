@@ -14,7 +14,7 @@
 
 		<div class="row">
 			<div class="col-md-6">
-				<range-slider label="General Liability"></range-slider>
+				<range-slider id="gen" label="General Liability" name="gen"></range-slider>
 			</div>
 		</div>
 

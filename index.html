@@ -43,6 +43,7 @@
     <div id="calculator"></div>
    
     <!-- riot tags -->
+    <script type="riot/tag" src="components/range-slider.tag"></script>
     <script type="riot/tag" src="components/location-test.tag"></script>
     <script type="riot/tag" src="components/autocomplete.tag"></script>
     <script type="riot/tag" src="components/app-header.tag"></script>
@@ -57,19 +58,10 @@
       riot.compile(function() {
         window.zenith.tags = riot.mount('*')
         route.start(true)
+
+          console.log(window.zenith.tags);
       })
 
-      //example call tag function from outside javascript
-      window.tagTest = function() {
-          console.log("test");
-          var appContent = window.zenith.tags[1];
-          var quoteForm = appContent.tags["quote-form"];
-          var autocomplete = quoteForm.tags.autocomplete[0];
-
-          autocomplete.refs.input.value = "test";
-          autocomplete.shown = true;
-          autocomplete.update();
-      }
     </script>
 
 
