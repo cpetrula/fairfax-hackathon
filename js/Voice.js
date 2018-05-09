@@ -1,6 +1,6 @@
-var zenith = zenith || {};
-zenith.Voice = (function () {
-    const client = new ApiAi.ApiAiClient({accessToken: 'af903922614a48c3bdef91ac2c7ba5f4'});
+var sol = sol || {};
+sol.Voice = (function () {
+    const client = new ApiAi.ApiAiClient({accessToken: 'b6a706a819874e4c8988e299b1982a83'});
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
     const recognition = new SpeechRecognition();
     var keepActive;
@@ -10,12 +10,12 @@ zenith.Voice = (function () {
     recognition.maxAlternatives = 1;
 
     recognition.addEventListener('speechstart', () => {
-        setVoiceActivationIconToListening();
+        //setVoiceActivationIconToListening();
         console.log('Speech has been detected.');
     });
 
     recognition.addEventListener('result', (e) => {
-        //console.log('Result has been detected.');
+        console.log('Result has been detected.');
 
         let last = e.results.length - 1;
         let text = e.results[last][0].transcript;
@@ -23,7 +23,7 @@ zenith.Voice = (function () {
         $("#voice-indicator-icon").attr("title",'"'+text+'"');
         $("#voice-indicator-icon").attr("data-original-title",'"'+text+'"');
         $("#voice-indicator-icon").tooltip('show');        
-
+				console.log(text)
         var promise = client.textRequest(text);
 
         promise
@@ -40,6 +40,7 @@ zenith.Voice = (function () {
             recognition.start(); //this keeps the listener open.  By default turns off after a couple minutes.
         }
         else {
+						console.log("ended")
             setVoiceActivationIconToInactive();
         }
     }
@@ -52,13 +53,14 @@ zenith.Voice = (function () {
     });
 
     var init = function () {
-        changeVoiceActivationStatus();
+      startListening();  
+			//changeVoiceActivationStatus();
     }
 
     var startListening = function () {
         keepActive=true;
         recognition.start();
-        setVoiceActivationIconToActive();
+        //setVoiceActivationIconToActive();
         //setVoiceActivationIconToIdle();
     }
 
@@ -68,8 +70,9 @@ zenith.Voice = (function () {
     }
 
     var handleResponse = function (serverResponse) {
-        setVoiceActivationIconToIdle();
-        zenith.VoiceIntents.search(serverResponse);
+				console.log(serverResponse)
+        //setVoiceActivationIconToIdle();
+        //zenith.VoiceIntents.search(serverResponse);
     }   
     var handleError = function (serverError) {
         console.log(serverError);
