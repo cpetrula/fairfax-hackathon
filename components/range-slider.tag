@@ -7,12 +7,12 @@
             </label>
             <br/>
             <label>
-                Yes&nbsp;
-                <input type="radio" ref="yes" name={name} value="true" />
+                No&nbsp;
+                <input type="radio" ref="no" name={name}  value="no" checked onchange={onNo} />
             </label>&nbsp;&nbsp;
             <label>
-                No&nbsp;
-                <input type="radio" ref="no" name={name}  value="no" />
+                Yes&nbsp;
+                <input type="radio" ref="yes" name={name} value="true" onchange={onYes}/>
             </label>
         </div>
         <div if="{!this.isBoolean()}">
@@ -31,7 +31,7 @@
             0,100,200
         ];
         this.ion = null;
-
+        this.lastValue = 0;
 
         this.on('mount', () => {
             this.initBoolean();
@@ -43,9 +43,33 @@
             this.initBoolean();
         });
 
+        onYes(evt) {
+            evt.preventUpdate = true;
+
+            // console.log("onYes");
+            this.trigger('input', {
+                name: this.name,
+                value: 1
+            });
+        }
+
+        onNo(evt) {
+            evt.preventUpdate = true;
+
+            // console.log("onNo");
+            this.trigger('input', {
+                name: this.name,
+                value: 0
+            });
+        }
+
+        getValue() {
+            return this.isBoolean() ? this.refs.yes.checked : this.refs.input.value;
+        }
+
         initBoolean() {
             if (!this.isBoolean()) {
-                console.log("init ion");
+                // console.log("init ion");
                 if (this.ion) {
                     this.ion.data("ionRangeSlider").destroy();
                 }
@@ -57,7 +81,15 @@
                     grid: true,
                     values: this.coverages,
                     prefix: "$",
-                    keyboard: true
+                    keyboard: true,
+                    onChange: () => {
+                        var value = this.refs.input.value;
+                        // console.log("onChange", value);
+                        this.trigger('input', {
+                            name: this.name,
+                            value: value
+                        });
+                    }
                 });
             }
         }

@@ -4,6 +4,7 @@
 				<hp-top></hp-top>
 			</div>
 			<quote-form id="quote-form"></quote-form>
+		    <!-- <quote-form2></quote-form2> -->
 			<div id="hp-bottom">
 				<hp-bottom></hp-bottom>
 			</div>
