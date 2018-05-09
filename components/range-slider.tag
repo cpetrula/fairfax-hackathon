@@ -31,7 +31,6 @@
             0,100,200
         ];
         this.ion = null;
-        this.lastValue = 0;
 
         this.on('mount', () => {
             this.initBoolean();
@@ -64,12 +63,12 @@
         }
 
         getValue() {
-            return this.isBoolean() ? this.refs.yes.checked : this.refs.input.value;
+            return this.isBoolean() ? (this.refs.yes.checked + 0) : parseInt(this.refs.input.value);
         }
 
         initBoolean() {
             if (!this.isBoolean()) {
-                // console.log("init ion");
+                console.log("init ion");
                 if (this.ion) {
                     this.ion.data("ionRangeSlider").destroy();
                 }
@@ -87,7 +86,7 @@
                         // console.log("onChange", value);
                         this.trigger('input', {
                             name: this.name,
-                            value: value
+                            value: parseInt(value)
                         });
                     }
                 });
