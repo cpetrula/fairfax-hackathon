@@ -4,19 +4,19 @@ var getMonthlyQuote = function(primaryName, province, revenue, coverages) {
 
     for (var i = 0; i < coverages.length; i++) {
         var coverage = coverages[i];
-        if (coverage == "CGL") {
+        if (coverage.code === "CGL") {
             total += getCommercialGeneralLiabilityQuote(primaryName, province, revenue);
-        } else if (coverage == "DATA") {
+        } else if (coverage.code === "DATA") {
             total += getCyberLiabilityQuote(primaryName, province, revenue);
-        } else if (coverage == "CONTENT") {
+        } else if (coverage.code === "CONTENT") {
             total += getBusinessContentQuote(primaryName, province, coverage.coverageAmount);
-        } else if (coverage == "ERRORS") {
+        } else if (coverage.code === "ERRORS") {
             total += getBusinessErrorsQuote(primaryName, province, coverage.coverageAmount);
-        } else if (coverage == "INSTALLATION") {
+        } else if (coverage.code === "INSTALLATION") {
             total += getInstallationQuote(primaryName, province, revenue);
-        } else if (coverage == "TOOLS") {
+        } else if (coverage.code === "TOOLS") {
             total += getToolsQuote(primaryName, province, revenue, coverage.coverageAmount);
-        } else if (coverage == "INTERRUPTION") {
+        } else if (coverage.code === "INTERRUPTION") {
             total += getInterruptionCoverage(primaryName, province, revenue);
         }
     }
@@ -97,6 +97,8 @@ var getCoveragesForPrimaryName = function(primaryName) {
         }
         coverages.push(c);
     }
+
+    return coverages;
 }
 
 var _isPrimaryNameInArray = function(arr, primaryName) {
