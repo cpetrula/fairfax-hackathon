@@ -1,5 +1,5 @@
-var zenith = zenith || {};
-zenith.Voice = (function () {
+var sol = sol || {};
+sol.Voice = (function () {
     const client = new ApiAi.ApiAiClient({accessToken: 'ada2581758904a9080d1c2b62e3337d8'});
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
     const recognition = new SpeechRecognition();
@@ -69,7 +69,7 @@ zenith.Voice = (function () {
 
     var handleResponse = function (serverResponse) {
         setVoiceActivationIconToIdle();
-        zenith.VoiceIntents.search(serverResponse);
+        sol.VoiceIntents.search(serverResponse);
     }   
     var handleError = function (serverError) {
         console.log(serverError);

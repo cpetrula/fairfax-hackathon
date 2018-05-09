@@ -1,18 +1,18 @@
 var sol = sol || {};
 sol.Main = (function () {
     var init = function () {
-      $('#calculator').jqSlideOutPanel({
-          position:"right",
-          width:"300px",
-          action:"push",
-          showToggle:false,
-          showCloseIcon:true,
-          showModalMask:false
-      });
+//       $('#calculator').jqSlideOutPanel({
+//           position:"right",
+//           width:"300px",
+//           action:"push",
+//           showToggle:false,
+//           showCloseIcon:true,
+//           showModalMask:false
+//       });
 
-      $("#slide-out-nav-toggle-btn").on("click",function() {
-          $("#calculator").jqSlideOutPanel("open");
-      })
+//       $("#slide-out-nav-toggle-btn").on("click",function() {
+//           $("#calculator").jqSlideOutPanel("open");
+//       })
     }
     var loadTags = function () {
         var tags=zenith.CP.user.config.tags;

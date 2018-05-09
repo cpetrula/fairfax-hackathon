@@ -1,5 +1,5 @@
-var zenith=zenith || {};
-zenith.VoiceIntents = (function() {
+var sol=sol || {};
+sol.VoiceIntents = (function() {
     var fontSize=100;
     var search = function (response) {
         console.log(response);
@@ -41,7 +41,7 @@ zenith.VoiceIntents = (function() {
     }
     var print = function (response) {
         var params=response.result.parameters;
-        zenith.Utils.printPage();
+        sol.Utils.printPage();
     }
     var siteNavigation = function (response) {
         var params=response.result.parameters;
@@ -89,7 +89,7 @@ zenith.VoiceIntents = (function() {
         if ($(".dataTable").length==1) {
             var table=$(".dataTable");
             if (action=="sort" && fieldName != "") {
-                zenith.Utils.sortTable(table,fieldName);
+                sol.Utils.sortTable(table,fieldName);
             }
             if (action=="filter" && fieldName != "") {
                 table.DataTable().search(fieldName).draw();
