@@ -31,5 +31,13 @@
         .contact-phone a {
             color:#6c757d;
         }
+			  @media (max-width: 420px) {
+					.contact-phone {
+						display:none;
+					}
+					.logo {
+						width:300px;
+					}
+			}
     </style>
 </app-header>
