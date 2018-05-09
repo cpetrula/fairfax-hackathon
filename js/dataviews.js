@@ -128,7 +128,7 @@ var getBusinessContentQuote =  function(primaryName, province, coverage) {
         var pv = mainList[i].province_code;
 
         if (primaryName == pn && pv.includes(province)) {
-            return mainList[coverage_limit];
+            return mainList[i][coverage_limit];
         }
     }
 }
@@ -191,7 +191,7 @@ var getBusinessErrorsQuote =  function(primaryName, province, coverage) {
         var pv = mainList[i].province_code;
 
         if (primaryName == pn && pv.includes(province)) {
-            return {quote: mainList[coverage_limit], coverageLimit: mainList.coverageLimit};}
+            return {quote: mainList[i][coverage_limit], coverageLimit: mainList[i].coverageLimit};}
     }
 }
 
@@ -212,7 +212,7 @@ var getToolsQuote =  function(primaryName, province, coverage) {
         var pv = mainList[i].province_code;
 
         if (primaryName == pn && pv.includes(province)) {
-            return {quote: mainList[coverage_limit], coverageLimit: mainList.coverageLimit};}
+            return {quote: mainList[i][coverage_limit], coverageLimit: mainList[i].coverageLimit};}
     }
 }
 
@@ -225,7 +225,7 @@ var getRatesForLiability =  function(mainList, primaryName, province, revenue) {
     } else if (revenue <= 250000) {
         revenue_lookup = "revenueRange-UP_TO_250K";
     } else if (revenue <= 500000) {
-        revenue_lookup = "revenueRange-UP_TO_250K";
+        revenue_lookup = "revenueRange-UP_TO_500K";
     }
 
     var results = [];
@@ -234,13 +234,38 @@ var getRatesForLiability =  function(mainList, primaryName, province, revenue) {
         var pv = mainList[i].province_code;
 
         if (primaryName == pn && pv.includes(province)) {
-            var result = {quote: mainList[revenue_lookup], coverageLimit: mainList.coverageLimit};
+            var result = {quote: mainList[i][revenue_lookup], coverageLimit: mainList[i].coverageLimit};
             results.push(result);
         }
     }
     return results;
 }
 
+
+var getRatesForLiability =  function(mainList, primaryName, province, revenue) {
+    var revenue_lookup = "revenueRange-UP_TO_50K";
+    if (revenue <= 50000) {
+        revenue_lookup = "revenueRange-UP_TO_50K";
+    } else if (revenue <= 100000) {
+        revenue_lookup = "revenueRange-UP_TO_100K";
+    } else if (revenue <= 250000) {
+        revenue_lookup = "revenueRange-UP_TO_250K";
+    } else if (revenue <= 500000) {
+        revenue_lookup = "revenueRange-UP_TO_500K";
+    }
+
+    var results = [];
+    for (i = 0; i < mainList.length; i++) {
+        var pn = mainList[i].primaryName;
+        var pv = mainList[i].province_code;
+
+        if (primaryName == pn && pv.includes(province)) {
+            var result = {quote: mainList[i][revenue_lookup], coverageLimit: mainList[i].coverageLimit};
+            results.push(result);
+        }
+    }
+    return results;
+}
 
 
 //  Datasheet should be pulled from /data/all_data.json
