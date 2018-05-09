@@ -68,12 +68,14 @@
         this.value = "";
         this.valueItem = null;
 
-
-
+        //if load new items from remoteUrl
+        this.remoteUrl = null;
 
         this.on('mount', () => {
             if (this.opts.url) {
                 this.load(this.opts.url);
+            } else if (this.opts.remoteUrl) {
+                this.remoteUrl =  this.opts.remoteUrl;
             }
         });
 
@@ -103,13 +105,42 @@
             // console.log("show", this.shown);
         }
 
-        onInput(evt) {
-            //save value no matter what
-            this.value = this.refs.input.value;
+        search(text) {
+            if (this.remoteUrl) {
+                //search via a url
+                return fetch(`${this.remoteUrl}${encodeURIComponent(text)}`)
+                    .then((resp) => {
+                        if (!resp.ok) {
+                            console.log(resp);
+                        }
 
-            var text = this.value.toLowerCase();
-            //filter items
-            this.shownItems = this.items.filter((item) => {
+                        return resp.json()
+                    })
+                    .then((json) => {
+                        console.log(json);
+                        //map json to name/description format
+
+                        var mapped = json.predictions.map((pred) => {
+                            return {
+                                name: pred.terms[0].value,
+                                description: pred.description.substring(pred.terms[1].offset)
+                            }
+                        })
+
+                        return Promise.resolve(mapped);
+                    })
+
+
+
+            } else {
+                //do a default text search of items
+                return Promise.resolve(this.score(text));
+            }
+        }
+
+        score(text) {
+            //todo: use better a text search alg. (order by score, limit results)
+            return this.items.filter((item) => {
                 var name = item.name.toLowerCase();
                 if (name.indexOf(text) !== -1) {
                     return true;
@@ -121,10 +152,30 @@
 
                 return false;
             });
+        }
 
+        onInput(evt) {
+            //save value no matter what
+            this.value = this.refs.input.value;
 
-            this.shown = this.value.length >= this.minLength;
-            // console.log("input", this.value, this.shown, this.shownItems);
+            var text = this.value.toLowerCase();
+            if (text.length >= this.minLength) {
+                this.search(text)
+                    .then((items) => {
+                        this.shownItems = items;
+                        this.shown = this.value.length >= this.minLength;
+                        this.update();
+                        // console.log("input", this.value, this.shown, this.shownItems);
+                    })
+                    .catch((err) => {
+                        console.log("Error searching items", err);
+                        alert(err);
+                    })
+            }
+
+            //update will happen later
+            evt.preventUpdate = true;
+
         }
 
         selectItem(item) {

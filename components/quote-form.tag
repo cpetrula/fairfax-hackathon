@@ -7,6 +7,7 @@
 			<input type="text" name="business-type" placeholder="What kind of business do you have?" class="form-control"/>
 			-->
 			<autocomplete name="business-type" placeholder="What kind of business do you have?" url="/data/businesses.json" />
+			<autocomplete name="business-name" placeholder="What is your business name?" remote-url="https://maps.googleapis.com/maps/api/place/autocomplete/json?key=AIzaSyBhjVl_50JNJBzOEGUuxY7tZY0E1tn7ll0&radius=100&type=establishment&location=43.6565353,-79.6010313&input=" />
 	</div>
 
 	<div class="calculator-container">
