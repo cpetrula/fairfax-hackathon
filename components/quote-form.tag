@@ -8,6 +8,14 @@
 			-->
 			<autocomplete name="business-type" placeholder="What kind of business do you have?" url="/data/businesses.json" />
 	</div>
+
+	<!--
+	<p style="max-width: 500px" class="questions-container">
+		Location test
+		<location1></location1>
+	</p>
+	-->
+
 	
 	<div class="payment-container">
 		<span class="monthly-payment-amount">$350</span> <span class="monthly-payment-text">per month</span>
