@@ -3,8 +3,12 @@
 	<div class="questions-container">
 			<h2>Let's get you some options!</h2>
 			<p class="help-text">Just start typing or use your voice.</p>
+			<!--
 			<input type="text" name="business-type" placeholder="What kind of business do you have?" class="form-control"/>
+			-->
+			<autocomplete name="business-type" placeholder="What kind of business do you have?" url="/data/businesses.json" />
 	</div>
+
 	<div class="calculator-container">
 		<label>General Liability Coverage</label>
 		<input name="general-liability" />
@@ -12,6 +16,14 @@
 		Test to increase liability insurance
 	</button>
 	</div>
+
+
+	<!--
+	<p style="max-width: 500px" class="questions-container">
+		Location test
+		<location1></location1>
+	</p>
+	-->
 
 	
 	<div class="payment-container">
