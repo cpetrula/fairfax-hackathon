@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Restaurant",
+    "description": "Shop that sells food from a fixed location",
+    "synonyms": [
+      "Coffee Shop",
+      "Cafe",
+      "Food",
+      "Diner"
+    ]
+  },
+  {
+    "name": "IT Contractor",
+    "description": "Individual who provides IT Services",
+    "synonyms": [
+      "Programmer",
+      "Computer"
+    ]
+  },
+  {
+    "name": "Laundromat",
+    "description": "Coin or cash operatated laundry facility",
+    "synonyms": [
+      "Laundry"
+    ]
+  },
+  {
+    "name": "Laundry Delivery Service",
+    "description": "Pick up/drop off laundry delivery service",
+    "synonyms": []
+  }
+]
