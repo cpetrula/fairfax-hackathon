@@ -1,6 +1,6 @@
 var zenith = zenith || {};
 zenith.Voice = (function () {
-    const client = new ApiAi.ApiAiClient({accessToken: 'ada2581758904a9080d1c2b62e3337d8'});
+    const client = new ApiAi.ApiAiClient({accessToken: 'af903922614a48c3bdef91ac2c7ba5f4'});
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
     const recognition = new SpeechRecognition();
     var keepActive;

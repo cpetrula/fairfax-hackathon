@@ -99,6 +99,11 @@ zenith.VoiceIntents = (function() {
             }
         }
     }
+    var myLocation = function(response) {
+        var params = response.result.parameteres;
+        console.log(params);
+    }
+    /*
     var claims = function (response) {
         var params=response.result.parameters;
         if (!!params.any) {
@@ -119,14 +124,16 @@ zenith.VoiceIntents = (function() {
         //}
         
     }
+    */
     var intents = {
-        "user.interface": userInterface,
-        "cp.print": print,
-        "cp.claims": claims,
-        "cp.site.navigation":siteNavigation,
-        "cp.listgrid":listgrid,
-        "cp.contacts":contacts,
-        "cp.policy":policy
+        "my.location": myLocation
+        // "user.interface": userInterface,
+        // "cp.print": print,
+        // "cp.claims": claims,
+        // "cp.site.navigation":siteNavigation,
+        // "cp.listgrid":listgrid,
+        // "cp.contacts":contacts,
+        // "cp.policy":policy
     }
 
     return {
