@@ -1,0 +1,2481 @@
+[
+  {
+    "classification": "CONTRACTING",
+    "code": 73501,
+    "nameCode": "Landscaper ",
+    "names": [
+      "Landscaper (No Pesticide / Herbicide Application)",
+      "Gardener (No Pesticide / Herbicide Application)",
+      "Landscape Contractor (No Pesticide / Herbicide Application)",
+      "Lawn Maintenullce (No Pesticide / Herbicide Application)",
+      "Lawn Care Services (No Pesticide / Herbicide Application)"
+    ]
+  },
+  {
+    "classification": "CONTRACTING",
+    "code": 173101,
+    "nameCode": "Residential Electrician",
+    "names": [
+      "Electrical Contractor (Residential)"
+    ]
+  },
+  {
+    "classification": "CONTRACTING",
+    "code": 175201,
+    "nameCode": "Finish Carpenter",
+    "names": [
+      "Carpentry (No Wood Shop),",
+      "Cabinetry work (No Wood Shop),",
+      "Trim Work (No Wood Shop),",
+      "Millwork (No Wood Shop)"
+    ]
+  },
+  {
+    "classification": "CONTRACTING",
+    "code": 175202,
+    "nameCode": "Handyman/Handywoman",
+    "names": [
+      "Handyman",
+      "Handywoman",
+      "Home Repair - Miscellaneous"
+    ]
+  },
+  {
+    "classification": "CONTRACTING",
+    "code": 181102,
+    "nameCode": "Framing Contractor",
+    "names": [
+      "Framer - Construction",
+      "Home Renovation Contractor"
+    ]
+  },
+  {
+    "classification": "CONTRACTING",
+    "code": 739401,
+    "nameCode": "Cleaner (mostly residential)",
+    "names": [
+      "Cleaning Services (residential)",
+      "Housekeeper",
+      "House Keeping Services",
+      "Janitorial Services (residential)"
+    ]
+  },
+  {
+    "classification": "CONTRACTING",
+    "code": 73601,
+    "nameCode": "Tree Removal/Pruning",
+    "names": [
+      "Tree Trimming",
+      "Tree Care",
+      "Tree Maintenullce",
+      "Tree Care & Maintenullce",
+      "Pruning Contractor"
+    ]
+  },
+  {
+    "classification": "CONTRACTING",
+    "code": 152101,
+    "nameCode": "Paving Contractor (Residential)",
+    "names": [
+      "Patterned Concrete Contractor (residential)",
+      "Interlocking Brick Contractor (residential)",
+      "Driveway Construction (residential)",
+      "Driveway Repair (residential)"
+    ]
+  },
+  {
+    "classification": "CONTRACTING",
+    "code": 152102,
+    "nameCode": "Paving Contractor (Commercial)",
+    "names": [
+      "Paving Contractor (commercial)",
+      "Parking lot construction"
+    ]
+  },
+  {
+    "classification": "CONTRACTING",
+    "code": 152201,
+    "nameCode": "Fences & Decks Contractor",
+    "names": [
+      "Fencing Contractor (residential)",
+      "Fence Construction (residential)",
+      "Fence Repair (residential)",
+      "Deck Construction (residential)",
+      "Deck Repair (residential)"
+    ]
+  },
+  {
+    "classification": "CONTRACTING",
+    "code": 153401,
+    "nameCode": "Residential Internet/Phone/Cable Installation",
+    "names": [
+      "Communication Equipment Installation - Residential",
+      "Internet Installation - Residential",
+      "Phone Installation - Residential",
+      "Cable TV Installation - Residential"
+    ]
+  },
+  {
+    "classification": "CONTRACTING",
+    "code": 171101,
+    "nameCode": "Residential Plumber",
+    "names": [
+      "Residential Plumber"
+    ]
+  },
+  {
+    "classification": "CONTRACTING",
+    "code": 171103,
+    "nameCode": "Commercial Plumber",
+    "names": [
+      "Commercial Plumber"
+    ]
+  },
+  {
+    "classification": "CONTRACTING",
+    "code": 171501,
+    "nameCode": "HVAC Contractor (Residential Only)",
+    "names": [
+      "HVAC Repair (Residential)",
+      "HVAC Technician (Residential)",
+      "HVAC Installation (Residential)",
+      "Heating Contractor (Residential)",
+      "Heating Repair (Residential)"
+    ]
+  },
+  {
+    "classification": "CONTRACTING",
+    "code": 171502,
+    "nameCode": "HVAC Contractor (Commercial)",
+    "names": [
+      "HVAC Repair (Commercial)",
+      "HVAC Technician (Commercial)",
+      "HVAC Installation (Commercial)",
+      "Heating Contractor (Commercial)",
+      "Heating Technician (Commercial)"
+    ]
+  },
+  {
+    "classification": "CONTRACTING",
+    "code": 171505,
+    "nameCode": "Air Duct Cleaning (Residential)",
+    "names": [
+      "Air Duct Cleaning (Residential)"
+    ]
+  },
+  {
+    "classification": "CONTRACTING",
+    "code": 171901,
+    "nameCode": "Solar Energy Contractors",
+    "names": [
+      "Solar Energy Contractor (sales / Service / Installation - Only)",
+      "Solar Heating Contractor (sales / Service / Installation - Only)"
+    ]
+  },
+  {
+    "classification": "CONTRACTING",
+    "code": 173102,
+    "nameCode": "Commercial Electrician",
+    "names": [
+      "Electrician (commercial)",
+      "Electrical Contractor (commercial)",
+      "Electrical Technician (commercial)",
+      "Electrical Repair (commercial)"
+    ]
+  },
+  {
+    "classification": "CONTRACTING",
+    "code": 174301,
+    "nameCode": "Masonry Contractor",
+    "names": [
+      "Bricklaying Contractor",
+      "Bricklayer",
+      "Stonework Contractor",
+      "Stoneworker"
+    ]
+  },
+  {
+    "classification": "CONTRACTING",
+    "code": 174401,
+    "nameCode": "Drywaller",
+    "names": [
+      "Drywall Installation",
+      "Drywall Repairs"
+    ]
+  },
+  {
+    "classification": "CONTRACTING",
+    "code": 174501,
+    "nameCode": "Tiling Contractor",
+    "names": [
+      "Tilework",
+      "Tile Contractor",
+      "Tile Installation",
+      "Tile Repair"
+    ]
+  },
+  {
+    "classification": "CONTRACTING",
+    "code": 175401,
+    "nameCode": "Residential Painter",
+    "names": [
+      "Residential Painter"
+    ]
+  },
+  {
+    "classification": "CONTRACTING",
+    "code": 175601,
+    "nameCode": "Flooring Installer",
+    "names": [
+      "Flooring Contractor"
+    ]
+  },
+  {
+    "classification": "CONTRACTING",
+    "code": 176601,
+    "nameCode": "Window/Door/Siding Contractor",
+    "names": [
+      "Window Installation",
+      "Window Repair",
+      "Door Installation",
+      "Door Repair",
+      "Siding Installation",
+      "Siding Repair"
+    ]
+  },
+  {
+    "classification": "CONTRACTING",
+    "code": 177001,
+    "nameCode": "Residential Well Digging",
+    "names": [
+      "Well Drilling (No Oil / Gas, No Directional Drilling) - Residential",
+      "Well Digging (No Oil / Gas, No Directional Drilling) - Residential"
+    ]
+  },
+  {
+    "classification": "CONTRACTING",
+    "code": 183102,
+    "nameCode": "Swimming Pool Maintenullce",
+    "names": [
+      "Swimming Pool Repair"
+    ]
+  },
+  {
+    "classification": "CONTRACTING",
+    "code": 739402,
+    "nameCode": "Window & Eaves Cleaning",
+    "names": [
+      "Cleaning Services (Commercial)",
+      "Janitorial Services (Commercial)",
+      "Cleaning/Custodian (mostly commercial)"
+    ]
+  },
+  {
+    "classification": "CONTRACTING",
+    "code": 739501,
+    "nameCode": "Furniture & Rug Cleaning",
+    "names": [
+      "Furniture Cleaning ",
+      "Rug Cleaning",
+      "Drapery Cleaning",
+      "Carpet Cleaning",
+      "Upholstery Cleaning"
+    ]
+  },
+  {
+    "classification": "CONTRACTING",
+    "code": 769301,
+    "nameCode": "Locksmith",
+    "names": [
+      "Locksmith"
+    ]
+  },
+  {
+    "classification": "PROFESSIONAL_SERVICES",
+    "code": 73805,
+    "nameCode": "Dog Walker",
+    "names": [
+      "Dog Walker"
+    ]
+  },
+  {
+    "classification": "PROFESSIONAL_SERVICES",
+    "code": 175701,
+    "nameCode": "Interior Designer",
+    "names": [
+      "Interior Designer"
+    ]
+  },
+  {
+    "classification": "PROFESSIONAL_SERVICES",
+    "code": 641401,
+    "nameCode": "Management Consultant",
+    "names": [
+      "Management Consultant"
+    ]
+  },
+  {
+    "classification": "PROFESSIONAL_SERVICES",
+    "code": 641403,
+    "nameCode": "Operations Consultant",
+    "names": [
+      "Operations Consultant"
+    ]
+  },
+  {
+    "classification": "PROFESSIONAL_SERVICES",
+    "code": 641405,
+    "nameCode": "Marketing Consultant",
+    "names": [
+      "Marketing Consultant"
+    ]
+  },
+  {
+    "classification": "PROFESSIONAL_SERVICES",
+    "code": 641407,
+    "nameCode": "Life / Personal Coach",
+    "names": [
+      "Life Coach ",
+      "Personal Coach",
+      "Business Coach"
+    ]
+  },
+  {
+    "classification": "PROFESSIONAL_SERVICES",
+    "code": 641411,
+    "nameCode": "IT Consultant",
+    "names": [
+      "IT Consultant"
+    ]
+  },
+  {
+    "classification": "PROFESSIONAL_SERVICES",
+    "code": 729201,
+    "nameCode": "Photographer / Videographer",
+    "names": [
+      "Photographer (no destination weddings outside of Canada)",
+      "Photographers' Studio (no destination weddings outside of Canada)",
+      "Videographer (no destination weddings outside of Canada)"
+    ]
+  },
+  {
+    "classification": "PROFESSIONAL_SERVICES",
+    "code": 729701,
+    "nameCode": "Hair / Beauty",
+    "names": [
+      "Beauty Parlour (hairstylists, manicures, pedicures - only, no estheticicans)",
+      "Hairstylist",
+      "Barber Shop"
+    ]
+  },
+  {
+    "classification": "PROFESSIONAL_SERVICES",
+    "code": 73802,
+    "nameCode": "Pet Daycare",
+    "names": [
+      "Animal Daycare"
+    ]
+  },
+  {
+    "classification": "PROFESSIONAL_SERVICES",
+    "code": 73803,
+    "nameCode": "Pet Groomer",
+    "names": [
+      "Animal Groomer"
+    ]
+  },
+  {
+    "classification": "PROFESSIONAL_SERVICES",
+    "code": 73804,
+    "nameCode": "Pet Trainer",
+    "names": [
+      "Animal Trainer (no horses or exotic animals)"
+    ]
+  },
+  {
+    "classification": "PROFESSIONAL_SERVICES",
+    "code": 73806,
+    "nameCode": "Pet Sitter",
+    "names": [
+      "Animal Sitter"
+    ]
+  },
+  {
+    "classification": "PROFESSIONAL_SERVICES",
+    "code": 489102,
+    "nameCode": "Music/Sound Recording Studio",
+    "names": [
+      "Music Recording Studio",
+      "Sound Recording Studio"
+    ]
+  },
+  {
+    "classification": "PROFESSIONAL_SERVICES",
+    "code": 641402,
+    "nameCode": "Organizational Consultant",
+    "names": [
+      "Organizational Consultant"
+    ]
+  },
+  {
+    "classification": "PROFESSIONAL_SERVICES",
+    "code": 641404,
+    "nameCode": "Human Resource Consultant",
+    "names": [
+      "HR Consultant"
+    ]
+  },
+  {
+    "classification": "PROFESSIONAL_SERVICES",
+    "code": 641406,
+    "nameCode": "Strategic Consultant",
+    "names": [
+      "Strategic Consultant"
+    ]
+  },
+  {
+    "classification": "PROFESSIONAL_SERVICES",
+    "code": 641408,
+    "nameCode": "Business Incubator",
+    "names": [
+      "Business Incubator"
+    ]
+  },
+  {
+    "classification": "PROFESSIONAL_SERVICES",
+    "code": 641410,
+    "nameCode": "Project Manager (Non-Construction)",
+    "names": [
+      "Project Manager (Non-Construction)"
+    ]
+  },
+  {
+    "classification": "PROFESSIONAL_SERVICES",
+    "code": 731202,
+    "nameCode": "Copywriter",
+    "names": [
+      "Copywriter"
+    ]
+  },
+  {
+    "classification": "PROFESSIONAL_SERVICES",
+    "code": 731301,
+    "nameCode": "Public Relations Consultant",
+    "names": [
+      "Public Relations Consultant"
+    ]
+  },
+  {
+    "classification": "PROFESSIONAL_SERVICES",
+    "code": 731302,
+    "nameCode": "Professional Artist",
+    "names": [
+      "Graphic Designer (no web design)",
+      "Graphic Designer"
+    ]
+  },
+  {
+    "classification": "PROFESSIONAL_SERVICES",
+    "code": 731303,
+    "nameCode": "Graphic & Web Designer",
+    "names": [
+      "Web Designer"
+    ]
+  },
+  {
+    "classification": "PROFESSIONAL_SERVICES",
+    "code": 740201,
+    "nameCode": "Caterer",
+    "names": [
+      "Caterer"
+    ]
+  },
+  {
+    "classification": "PROFESSIONAL_SERVICES",
+    "code": 740801,
+    "nameCode": "Translator",
+    "names": [
+      "Translator"
+    ]
+  },
+  {
+    "classification": "PROFESSIONAL_SERVICES",
+    "code": 830401,
+    "nameCode": "Educational Tutor (Sole Proprietor)",
+    "names": [
+      "Music Teacher (Sole Proprietor)"
+    ]
+  },
+  {
+    "classification": "PROFESSIONAL_SERVICES",
+    "code": 891801,
+    "nameCode": "Software DeveloperSoftware Developers (pre-packaged only)",
+    "names": [
+      "Software DeveloperSoftware Developers (pre-packaged only)"
+    ]
+  },
+  {
+    "classification": "RETAIL",
+    "code": 205101,
+    "nameCode": "Bakery Manufacturer",
+    "names": [
+      "Baked Goods (made in-house)",
+      "Bakery (made in-house)",
+      "Pasta (made in-house)"
+    ]
+  },
+  {
+    "classification": "RETAIL",
+    "code": 233001,
+    "nameCode": "Children's Clothing Manufacturer",
+    "names": [
+      "Children's Clothing Manufacturer"
+    ]
+  },
+  {
+    "classification": "RETAIL",
+    "code": 542101,
+    "nameCode": "Bakery Store (may or may not include some on-site baking)",
+    "names": [
+      "Bakery store (no manufacturing)",
+      "Baked goods store (no manufacturing)",
+      "Baked Goods"
+    ]
+  },
+  {
+    "classification": "RETAIL",
+    "code": 543301,
+    "nameCode": "Gourmet & Specialty Foods",
+    "names": [
+      "Gourmet & Specialty Foods"
+    ]
+  },
+  {
+    "classification": "RETAIL",
+    "code": 569201,
+    "nameCode": "Hats, Scarves & Accessories Store",
+    "names": [
+      "Clothing Accessories - Retail",
+      "Costume Jewellery & Accessories - Retail",
+      "Leatherwork"
+    ]
+  },
+  {
+    "classification": "RETAIL",
+    "code": 569301,
+    "nameCode": "Children's Clothing Store",
+    "names": [
+      "Family Clothing Store (including Children's)"
+    ]
+  },
+  {
+    "classification": "RETAIL",
+    "code": 569401,
+    "nameCode": "Men’s & Women’s Clothing Store",
+    "names": [
+      "Mens & Womens Clothing - Retail (no children's, no infant's)"
+    ]
+  },
+  {
+    "classification": "RETAIL",
+    "code": 571103,
+    "nameCode": "Candles",
+    "names": [
+      "Candle Store (no manufacturing)",
+      "Gift Shop",
+      "Wood Crafts"
+    ]
+  },
+  {
+    "classification": "RETAIL",
+    "code": 599301,
+    "nameCode": "Books & Stationery",
+    "names": [
+      "Bookstore",
+      "Stationery Store",
+      "Florist"
+    ]
+  },
+  {
+    "classification": "RETAIL",
+    "code": 722102,
+    "nameCode": "Clothing Alteration/Tailor/Seamstress",
+    "names": [
+      "Tailor",
+      "Seamstress",
+      "Clothing Alterations"
+    ]
+  },
+  {
+    "classification": "RETAIL",
+    "code": 249003,
+    "nameCode": "Cabinet Maker (I also manufacture)",
+    "names": [
+      "Wood Products Manufacturing (Cabinetry, Molding, Trim, Fixtures, Partitions, Closets)",
+      "Kitchen Cabinet Maker"
+    ]
+  },
+  {
+    "classification": "RETAIL",
+    "code": 204102,
+    "nameCode": "Pet Foods & Supplies",
+    "names": [
+      "Pet Foods & Supplies"
+    ]
+  },
+  {
+    "classification": "RETAIL",
+    "code": 205201,
+    "nameCode": "Candy & Confectionary Manufacturer",
+    "names": [
+      "Candy Manufacturing",
+      "Confectionary Manufacturing"
+    ]
+  },
+  {
+    "classification": "RETAIL",
+    "code": 231001,
+    "nameCode": "Men’s & Women’s Clothing Manufacturer",
+    "names": [
+      "Clothing Manufacturing (Men's / Women's Wear)"
+    ]
+  },
+  {
+    "classification": "RETAIL",
+    "code": 231101,
+    "nameCode": "Hats, Scarves & Accessories Manufacturer",
+    "names": [
+      "Hats, Scarves & Accessories Manufacturer"
+    ]
+  },
+  {
+    "classification": "RETAIL",
+    "code": 249001,
+    "nameCode": "Wood Crafts",
+    "names": [
+      "Wood Crafts"
+    ]
+  },
+  {
+    "classification": "RETAIL",
+    "code": 249301,
+    "nameCode": "Furniture Manufacturer",
+    "names": [
+      "Furniture Manufacturing - Upholstered (no outdoor)"
+    ]
+  },
+  {
+    "classification": "RETAIL",
+    "code": 275001,
+    "nameCode": "Print/Copy Shop",
+    "names": [
+      "Commercial Printer",
+      "Printer"
+    ]
+  },
+  {
+    "classification": "RETAIL",
+    "code": 284001,
+    "nameCode": "Cosmetics",
+    "names": [
+      "Cosmetics (I also manufacture)"
+    ]
+  },
+  {
+    "classification": "RETAIL",
+    "code": 299001,
+    "nameCode": "Candles",
+    "names": [
+      "Candles"
+    ]
+  },
+  {
+    "classification": "RETAIL",
+    "code": 319201,
+    "nameCode": "Leatherwork",
+    "names": [
+      "Leatherwork"
+    ]
+  },
+  {
+    "classification": "RETAIL",
+    "code": 387202,
+    "nameCode": "Costume Jewellery & Accessories",
+    "names": [
+      "Costume Jewellery & Accessories"
+    ]
+  },
+  {
+    "classification": "RETAIL",
+    "code": 525901,
+    "nameCode": "General Store/Housewares",
+    "names": [
+      "Giftware Store",
+      "Glassware Store",
+      "Crockery Store",
+      "China Store",
+      "Housewares - Store"
+    ]
+  },
+  {
+    "classification": "RETAIL",
+    "code": 543101,
+    "nameCode": "Candy & Confectionary Store",
+    "names": [
+      "Confectionary Store",
+      "Candy Store"
+    ]
+  },
+  {
+    "classification": "RETAIL",
+    "code": 571104,
+    "nameCode": "Art Framing",
+    "names": [
+      "Art Framing & Laminating",
+      "Custom Framing & Laminating - Art"
+    ]
+  },
+  {
+    "classification": "RETAIL",
+    "code": 571301,
+    "nameCode": "Furniture / Appliance Store",
+    "names": [
+      "Funiture, Appliances, Lighting Fixtures Shop ( no installations or repairs)"
+    ]
+  },
+  {
+    "classification": "RETAIL",
+    "code": 592001,
+    "nameCode": "Beer & Wine Shops",
+    "names": [
+      "Liquor, Beer, Wine Stores"
+    ]
+  },
+  {
+    "classification": "RETAIL",
+    "code": 593401,
+    "nameCode": "Bicycle Repair",
+    "names": [
+      "Non-motorized Bicycle store (including repair)",
+      "Non-motorized Bike store (including repair)"
+    ]
+  },
+  {
+    "classification": "RETAIL",
+    "code": 599401,
+    "nameCode": "Pet Foods & Supplies",
+    "names": [
+      "Pet Foods & Supplies- Retail (No live animals)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 73502,
+    "nameCode": "Landscaping / Gardening for Others (Incl. Pesticide / Herbicide Application)",
+    "names": [
+      "Landscaper (Incl. Pesticide / Herbicide Application)",
+      "Landscape Contractor (Incl. Pesticide / Herbicide Application)",
+      "Gardener (Incl. Pesticide / Herbicide Application)",
+      "Lawn Maintenullce (Incl. Pesticide / Herbicide Application)",
+      "Lawn Care Services (Incl. Pesticide / Herbicide Application)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 73801,
+    "nameCode": "Kennels / Boarding of Household Pets",
+    "names": [
+      "Kennels - Household Pets",
+      "Boarding - Household Pets",
+      "Dog Kennel",
+      "Dog Boarding",
+      "Cat Kennel",
+      "Cat Boarding"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 73807,
+    "nameCode": "Animal Wellness Centres",
+    "names": [
+      "Animal Wellness Centres"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 152301,
+    "nameCode": "Construction - Sidewalks",
+    "names": [
+      "Construction - Sidewalks"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 152401,
+    "nameCode": "Construction - Irrigation / Drainage / Sprinkler Systems (Commercial - No Fire Extinguishing)",
+    "names": [
+      "Construction - Irrigation / Drainage / Sprinkler Systems (Commercial - No Fire Extinguishing)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 152402,
+    "nameCode": "Construction - Irrigation / Drainage / Sprinkler Systems (Underground - Residential - No Fire Extinguishing)",
+    "names": [
+      "Construction - Irrigation / Drainage / Sprinkler Systems (Underground - Residential - No Fire Extinguishing)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 152601,
+    "nameCode": "Grading of Land (No excavation / road construction)",
+    "names": [
+      "Land Grader (No excavation / road construction)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 152701,
+    "nameCode": "Cleaning of Sewers / Drains (Residential)",
+    "names": [
+      "Sewer Cleaning (Residential)",
+      "Drain Cleaning (Residential)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 152702,
+    "nameCode": "Cleaning of Sewers / Drains (Commercial)",
+    "names": [
+      "Sewer Cleaning (Commercial)",
+      "Drain Cleaning (Commercial)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 152801,
+    "nameCode": "Cleaning of Streets",
+    "names": [
+      "Street Cleaning"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 153201,
+    "nameCode": "Signs - Installation (low rise - 3 stories or less)",
+    "names": [
+      "Installation of Signs (low rise - 3 stories or less)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 153402,
+    "nameCode": "Communication Equipment Installation - Commercial",
+    "names": [
+      "Communication Equipment Installation - Commercial",
+      "Internet Installation - Commercial",
+      "Phone Installation - Commercial",
+      "Cable TV Installation - Commercial"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 153501,
+    "nameCode": "Glazier Operations (low rise - 3 stories or less)",
+    "names": [
+      "Glazier Operations (low rise - 3 stories or less)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 171302,
+    "nameCode": "Gas Fitting (Non-Medical)",
+    "names": [
+      "Gas Fitting (Non-Medical)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 171504,
+    "nameCode": "Heating System Inspections",
+    "names": [
+      "Heating System Inspections"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 171801,
+    "nameCode": "Refrigeration Equipment Sales / Installation / Service - Commercial",
+    "names": [
+      "Refrigeration Equipment Repairs"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 172001,
+    "nameCode": "Water Softening or Treatment Equipment Sales / Installation / Service (No Water Treatment Facilities)",
+    "names": [
+      "Water Softening or Treatment Equipment Sales / Installation / Service (No Water Treatment Facilities)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 173201,
+    "nameCode": "Construction - Electric / Telephone / Power Lines (Above Ground)",
+    "names": [
+      "Electric / Telephone / Power Lines Construction (Above Ground)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 173301,
+    "nameCode": "Underground Cable / Conduit Installation",
+    "names": [
+      "Underground Cable / Conduit Installation"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 173501,
+    "nameCode": "Elevators / Escalators - Installation / Service",
+    "names": [
+      "Elevators / Escalators - Installation / Service"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 173601,
+    "nameCode": "Electrical Contractors - Industrial",
+    "names": [
+      "Electrical Contractors - Industrial"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 174101,
+    "nameCode": "Construction - Concrete Foundations and Forming (low rise - 3 stories or less)",
+    "names": [
+      "Construction - Concrete Foundations and Forming (low rise - 3 stories or less)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 174102,
+    "nameCode": "Construction - Concrete Foundations and Forming (High Rise)",
+    "names": [
+      "Construction - Concrete Foundations and Forming (High Rise)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 174201,
+    "nameCode": "Precast Beams / Supports - Installation",
+    "names": [
+      "Precast Beams / Supports - Installation"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 174202,
+    "nameCode": "Precast Concrete - Tilt Up Construction",
+    "names": [
+      "Precast Concrete - Tilt Up Construction"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 175101,
+    "nameCode": "Carpentry (incl. Wood Shop Operations)",
+    "names": [
+      "Trim Work (incl wood shop operations)",
+      "Millwork (incl wood shop operations)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 175301,
+    "nameCode": "Insulation of Buildings (No asbestos / UFFI abatement)",
+    "names": [
+      "Insulation Contractor (No asbestos / UFFI abatement)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 175502,
+    "nameCode": "Painting - Spray (Interior)",
+    "names": [
+      "Interior Spray Painting",
+      "Interior Spray Painting Contractor",
+      "Interior Spray Painter"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 175702,
+    "nameCode": "Home Stagers / Interior Decorators",
+    "names": [
+      "Home Stagers / Interior Decorators"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 176201,
+    "nameCode": "Sheet Metal Installation",
+    "names": [
+      "Sheet Metal Installation"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 176301,
+    "nameCode": "Welding / Cutting / Brazing",
+    "names": [
+      "Welding / Cutting / Brazing"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 176401,
+    "nameCode": "Iron / Steel Structures - Erection",
+    "names": [
+      "Iron / Steel Structures - Erection"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 176501,
+    "nameCode": "Iron / Steel Non-Structural (incl Railings)",
+    "names": [
+      "Iron / Steel Non-Structural (incl Railings)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 177402,
+    "nameCode": "Excavation - in Virgin Soil",
+    "names": [
+      "Virgin Soil Digging"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 177501,
+    "nameCode": "Roofing - Residential, No Heat Application",
+    "names": [
+      "Roofing - Residential, No Heat Application"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 177801,
+    "nameCode": "Septic Tanks - Installation / Service / Repair",
+    "names": [
+      "Septic Tanks - Installation / Service / Repair"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 177901,
+    "nameCode": "Exterior Building Cleaning / Sandblasting",
+    "names": [
+      "Exterior Building Cleaning / Sandblasting"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 178101,
+    "nameCode": "Fire Extinguishing Equipment Installation / Servicing / Refilling (No automatic systems)",
+    "names": [
+      "Fire Extinguishing Equipment Installation / Servicing / Refilling (No automatic systems)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 181203,
+    "nameCode": "Renovation - Residential (Apartments / Condos)",
+    "names": [
+      "Renovation - Residential (Apartments / Condos)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 181401,
+    "nameCode": "Construction - Mobile Homes / Prefabricated Housing (No Shop)",
+    "names": [
+      "Prefabricated Home Construction (no shop)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 183003,
+    "nameCode": "Renovation - Commercial - low rise - 3 stories or less",
+    "names": [
+      "Renovation - Commercial - low rise - 3 stories or less"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 183004,
+    "nameCode": "Renovation - Commercial - High Rise",
+    "names": [
+      "Renovation - Commercial - High Rise"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 183008,
+    "nameCode": "Renovation - Industrial",
+    "names": [
+      "Renovation - Industrial"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 201101,
+    "nameCode": "Dairy Products / Eggs / Honey / Creameries",
+    "names": [
+      "Dairy Products / Eggs / Honey / Creameries - Manufacturing / Processing"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 202101,
+    "nameCode": "Frozen Foods Processing",
+    "names": [
+      "Frozen Foods Processing"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 202201,
+    "nameCode": "Ice Manufacturing / Processing",
+    "names": [
+      "Ice Manufacturing / Processing"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 203001,
+    "nameCode": "Canning and Preserving (Meat / Fish / Fruit / Vegetables)",
+    "names": [
+      "Canning and Preserving (Meat / Fish / Fruit / Vegetables)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 204301,
+    "nameCode": "Coffee / Tea / Spice Processing",
+    "names": [
+      "Coffee / Tea / Spice Processing"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 208201,
+    "nameCode": "Beverage Manufacturing / Processing (Non-Alcoholic)",
+    "names": [
+      "Beverage Manufacturing / Processing (Non-Alcoholic)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 229101,
+    "nameCode": "Fabric / Textile Mills / Knitting / Spinning / Weaving",
+    "names": [
+      "Fabric / Textile Mills / Knitting / Spinning / Weaving"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 235101,
+    "nameCode": "Window Coverings / Blinds Manufacturing",
+    "names": [
+      "Window Coverings / Blinds Manufacturing"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 235201,
+    "nameCode": "Burlap / Canvas / Awnings / Tents / Sails Manufacturing",
+    "names": [
+      "Burlap / Canvas / Awnings / Tents / Sails Manufacturing"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 235301,
+    "nameCode": "Tent Erection / Removal / Repair (Off Premises)",
+    "names": [
+      "Tent Erection / Removal / Repair (Off Premises)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 249004,
+    "nameCode": "Wood Products Manufacturing (Staircases / Railings)",
+    "names": [
+      "Wood Products Manufacturing (Staircases / Railings)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 263301,
+    "nameCode": "Stationery Manufacturing",
+    "names": [
+      "Stationery Manufacturing"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 271001,
+    "nameCode": "Newspaper / Magazine Publishing / Printing",
+    "names": [
+      "Newspaper / Magazine Publishing / Printing"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 307101,
+    "nameCode": "Signs Manufacturing (Plastic)",
+    "names": [
+      "Signs Manufacturing (Plastic)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 307201,
+    "nameCode": "Media Manufacturing (Film / Tapes / Discs)",
+    "names": [
+      "Blank CD & DVD Manufacturing"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 307202,
+    "nameCode": "Software Media Manufacturing (No Development)",
+    "names": [
+      "Software Media Manufacturing (No Development)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 319301,
+    "nameCode": "Footwear Manufacturing",
+    "names": [
+      "Shoemaker",
+      "Shoe Manufacturing"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 328101,
+    "nameCode": "Glass / Ceramics / Porcelain Products Manufacturing (No Glassware)",
+    "names": [
+      "Ceramic Manufacturing (no glassware)",
+      "Porcelain Manufacturing (no glassware)",
+      "Glass Manufacturer (no glassware)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 328201,
+    "nameCode": "Glassware Manufacturing",
+    "names": [
+      "Glassware Manufacturing"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 329301,
+    "nameCode": "Brick / Clay Manufacturing",
+    "names": [
+      "Brickworks"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 329501,
+    "nameCode": "Stone Cutting / Polishing / Grinding / Monuments",
+    "names": [
+      "Stone Restoration"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 329701,
+    "nameCode": "Abrasives Manufacturing",
+    "names": [
+      "Abrasives Manufacturing"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 349201,
+    "nameCode": "Personal Computer / Calculator Manufacturing",
+    "names": [
+      "PC Manufacturing (Personal Computer / Calculator)",
+      "Computer Manufacturing (Personal Computer / Calculator)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 349401,
+    "nameCode": "Communications Equipment Manufacturing (Outside)",
+    "names": [
+      "Communications Equipment Manufacturing (Outside)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 349502,
+    "nameCode": "Electrical Wiring and Cable Manufacturing",
+    "names": [
+      "Electrical Wiring and Cable Manufacturing"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 349601,
+    "nameCode": "Electronic Games Manufacturing",
+    "names": [
+      "Video Game Manufacturing"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 357201,
+    "nameCode": "Heating Equipment Manufacturing - Electrical",
+    "names": [
+      "Heating Equipment Manufacturing - Electrical"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 357301,
+    "nameCode": "Appliance Manufacturing - Household (Small - e.g. Blenders / Toasters)",
+    "names": [
+      "Appliance Manufacturing - Household (Small - e.g. Blenders / Toasters)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 357401,
+    "nameCode": "Refrigeration Equipment Manufacturing - Industrial",
+    "names": [
+      "Refrigeration Equipment Manufacturing - Industrial"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 359001,
+    "nameCode": "Metal Products Manufacturing - Light, Not Otherwise Classified (incl Machine Shops / Tool & Die)",
+    "names": [
+      "Machine Shop / Metal Products Manufacturing - Light (Not Otherwise Classified)",
+      "Tool & Die Manufacturing"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 359002,
+    "nameCode": "Doors / Windows Manufacturing (Metal)",
+    "names": [
+      "Doors / Windows Manufacturing (Metal)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 359004,
+    "nameCode": "Metal Products Manufacturing (Staircases / Railings)",
+    "names": [
+      "Metal Products Manufacturing (Staircases / Railings)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 359005,
+    "nameCode": "Sheet Metal Products Manufacturing (Incl Ducts / Flumes / Flooring / Siding)",
+    "names": [
+      "Sheet Metal Products Manufacturing (Incl Ducts / Flumes / Flooring / Siding)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 359006,
+    "nameCode": "Tool and Die Manufacturing",
+    "names": [
+      "Tool & Die Shop",
+      "Tool & Die Maker"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 359007,
+    "nameCode": "Metal Stamping / Fabricated Metal Products",
+    "names": [
+      "Metal Stamping / Fabricated Metal Products"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 359008,
+    "nameCode": "Tools Manufacturing (Non-Powered)",
+    "names": [
+      "Hand Tool Manufacturing (Non-Powered)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 359401,
+    "nameCode": "Housewares Manufacturing (incl Cutlery)",
+    "names": [
+      "Housewares Manufacturing",
+      "Cutlery Manufacturing"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 359601,
+    "nameCode": "Signs Manufacturing (No Plastic)",
+    "names": [
+      "Signs Manufacturing (No Plastic)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 382101,
+    "nameCode": "Photographic Equipment / Supplies Manufacturing (No Film / Chemicals)",
+    "names": [
+      "Photographic Equipment / Supplies Manufacturing (No Film / Chemicals)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 382201,
+    "nameCode": "Optical Instruments / Lenses Manufacturing (No Eyewear)",
+    "names": [
+      "Optical Instruments / Lenses Manufacturing (No Eyewear)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 382401,
+    "nameCode": "Drafting / Surveying / Engineering / Machining",
+    "names": [
+      "Drafting / Surveying / Engineering / Machining"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 387101,
+    "nameCode": "Clocks / Clock Parts Manufacturing (No Watches)",
+    "names": [
+      "Clockmaker (no watches)",
+      "Clock Manufacturing (no watches)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 396001,
+    "nameCode": "Brooms / Brushes / Mops Manufacturing",
+    "names": [
+      "Broom Maker",
+      "Brush Maker",
+      "Mop Maker"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 426301,
+    "nameCode": "Household Moving / Packing Operations",
+    "names": [
+      "Moving Company, including packing (Household)",
+      "Household Mover"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 427301,
+    "nameCode": "Warehousing - General Merchandise (No Flammables / Explosives)",
+    "names": [
+      "Warehousing - General Merchandise (No Flammables / Explosives)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 427501,
+    "nameCode": "Storage and Moving - General Merchandise (No Flammables / Explosives)",
+    "names": [
+      "Storage and Moving - General Merchandise (No Flammables / Explosives)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 505101,
+    "nameCode": "Wholesale - Shoes / Boots",
+    "names": [
+      "Footwear Wholesaler",
+      "Footwear Distributor"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 505501,
+    "nameCode": "Wholesale - Clothing (Women's, no Children's, no Fur)",
+    "names": [
+      "Women`s Clothing (no children's, no fur) Wholesaler",
+      "Women`s Clothing (no children's, no fur) Distributor"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 505601,
+    "nameCode": "Wholesale - Clothing (Men's, no Children's, no Fur)",
+    "names": [
+      "Men`s Clothing (no children's, no fur) Wholesaler",
+      "Men`s Clothing (no children's, no fur) Distributor"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 505701,
+    "nameCode": "Wholesale - Textiles",
+    "names": [
+      "Textile Distributor"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 505801,
+    "nameCode": "Wholesale - Novelties / Souvenirs / Memorabilia (No Toys)",
+    "names": [
+      "Wholesale - Novelties / Souvenirs / Memorabilia (No Toys)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 506001,
+    "nameCode": "Wholesale - Food (Dry and Canned Goods - No Dietary / Health Supplements)",
+    "names": [
+      "Food Supplier (Dry and Canned Goods - No Dietary / Health Supplements)",
+      "Grocery Wholesaler (Dry and Canned Goods - No Dietary / Health Supplements)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 506101,
+    "nameCode": "Wholesale - Beverages (Non-Alcoholic)",
+    "names": [
+      "Beverage Supplier (Non-Alcoholic)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 506201,
+    "nameCode": "Wholesale - Meat / Fish / Poultry",
+    "names": [
+      "Wholesale Meat Supplier - Meat / Fish / Poultry"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 506301,
+    "nameCode": "Wholesale - Produce (Fruits / Vegetables)",
+    "names": [
+      "Produce Supplier (Fruits / Vegetables)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 509101,
+    "nameCode": "Wholesale - Appliances (Electrical)",
+    "names": [
+      "Appliance Distributor (Electrical)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 509201,
+    "nameCode": "Wholesale - Hardware / Plumbing Supplies / Electrical Supplies",
+    "names": [
+      "Wholesale - Hardware / Plumbing Supplies / Electrical Supplies"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 509301,
+    "nameCode": "Wholesale - Heating / Air Conditioning / Refrigeration Equipment (No Oil Heating)",
+    "names": [
+      "HVAC Equipment Wholesaler (No Oil Heating)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 509401,
+    "nameCode": "Wholesale - Electronics (Consumer incl Personal Computers)",
+    "names": [
+      "Consumer Electronics Wholesaler"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 510101,
+    "nameCode": "Wholesale - Machinery (Industrial)",
+    "names": [
+      "Wholesale - Machinery (Industrial)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 515201,
+    "nameCode": "Wholesale - Decorative Items",
+    "names": [
+      "Decoration Supplier",
+      "Decoration Wholesaler"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 515301,
+    "nameCode": "Wholesale - Floor Coverings (Rugs / Carpets)",
+    "names": [
+      "Wholesale - Floor Coverings (Rugs / Carpets)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 515401,
+    "nameCode": "Wholesale - Floor Coverings (No Rugs / Carpets)",
+    "names": [
+      "Wholesale - Floor Coverings (No Rugs / Carpets)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 515501,
+    "nameCode": "Wholesale - Draperies",
+    "names": [
+      "Wholesale - Draperies"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 516301,
+    "nameCode": "Wholesale - Farm / Garden / Lawn Supplies (Light)",
+    "names": [
+      "Wholesale - Farm / Garden / Lawn Supplies (Light)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 517101,
+    "nameCode": "Wholesale - Jewellery (Costume / Novelty)",
+    "names": [
+      "Costume Jewellery Wholesaler",
+      "Novelty Jewellery Wholesaler"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 518001,
+    "nameCode": "Wholesale - Newspapers / Periodicals / Books",
+    "names": [
+      "Wholesale - Newspapers / Periodicals / Books"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 519301,
+    "nameCode": "Wholesale - Stationery / Film / Religious Goods / Hobby Supplies",
+    "names": [
+      "Wholesale - Stationery / Film / Religious Goods / Hobby Supplies"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 519302,
+    "nameCode": "Wholesale - Musical Instruments",
+    "names": [
+      "Wholesale - Musical Instruments"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 519501,
+    "nameCode": "Wholesale - Cameras / Optical Goods",
+    "names": [
+      "Wholesale - Cameras / Optical Goods"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 521101,
+    "nameCode": "Wholesale - China / Glass / Earthenware",
+    "names": [
+      "Wholesale - China / Glass / Earthenware"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 521201,
+    "nameCode": "Wholesale - Marble / Decorative Stone / Clay",
+    "names": [
+      "Wholesale - Marble / Decorative Stone / Clay"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 522201,
+    "nameCode": "Wholesale - Metals (Not Otherwise Classified)",
+    "names": [
+      "Miscellaneous Metal Wholesaler"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 522301,
+    "nameCode": "Wholesale - Equipment for Restaurants / Bars / Hotels / Offices / Stores (Not Otherwise Classified)",
+    "names": [
+      "Wholesale - Equipment for Restaurants / Bars / Hotels / Offices / Stores (Not Otherwise Classified)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 522401,
+    "nameCode": "Wholesale - Beauty Supply / Barber Supply",
+    "names": [
+      "Wholesale - Beauty Supply / Barber Supply"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 523201,
+    "nameCode": "Wholesale - Office Machines (excl Computers)",
+    "names": [
+      "Wholesale - Office Machines (excl Computers)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 525101,
+    "nameCode": "Retail - Hardware (No Work Off Premises, No Firearms / Ammunition / Explosives)",
+    "names": [
+      "Retail - Hardware (No Work Off Premises, No Firearms / Ammunition / Explosives)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 525401,
+    "nameCode": "Retail - Paint / Wallpaper (No Work Off Premises)",
+    "names": [
+      "Retail - Paint / Wallpaper (No Work Off Premises)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 525501,
+    "nameCode": "Retail - Auto Parts / accessories (incl installation of accessories)",
+    "names": [
+      "Retail - Auto Parts / accessories (incl installation of accessories)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 525701,
+    "nameCode": "Retail - Building Materials / Home Improvement Centres (incl Lumber)",
+    "names": [
+      "Retail - Building Materials / Home Improvement Centres (incl Lumber)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 525801,
+    "nameCode": "Retail - Swimming Pool Supplies / Accessories",
+    "names": [
+      "Swimming Pool Supply Store"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 529101,
+    "nameCode": "Building Owner - Multiple Occupancy - Retail (Not Enclosed Mall)",
+    "names": [
+      "Building Owner / Landlord - Multiple Occupancy - Retail (Not Enclosed Mall)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 529201,
+    "nameCode": "Condominium Corporation - Multiple Occupancy - Retail",
+    "names": [
+      "Building Owner / Landlord - Multiple Occupancy - Retail (Not Enclosed Mall)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 530101,
+    "nameCode": "Building Owner - Multiple Occupancy - Retail (Enclosed Mall)",
+    "names": [
+      "Building Owner / Landlord - Multiple Occupancy - Retail (Enclosed Mall)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 541001,
+    "nameCode": "Retail - Grocery",
+    "names": [
+      "Grocery Store"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 542201,
+    "nameCode": "Retail - Dairy Products",
+    "names": [
+      "Dairy Products Retailer"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 543201,
+    "nameCode": "Retail - Frozen Foods",
+    "names": [
+      "Frozen Foods Retailer"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 543302,
+    "nameCode": "Retail - Butcher Shop",
+    "names": [
+      "Butcher Shop - Retailer",
+      "Meat Store - Retailer"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 551301,
+    "nameCode": "Auto Repair Garage (No heavy trucks)",
+    "names": [
+      "Auto Repair Garage (No heavy trucks)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 551503,
+    "nameCode": "Retail- Lawn/Garden Equipment",
+    "names": [
+      "Retail- Lawn/Garden Equipment"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 552301,
+    "nameCode": "Auto Specialty Shops (Mufflers / Transmissions / Radiators)",
+    "names": [
+      "Auto Specialty Shops (Mufflers / Transmissions / Radiators)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 552302,
+    "nameCode": "Auto Specialty Shops (Auto Detail / Glass / Lube)",
+    "names": [
+      "Car Detailing Service ",
+      "Auto Glass Sales & Repair",
+      "Auto Oil Change"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 559101,
+    "nameCode": "Retail - Marine Supplies / Ship Chandlers",
+    "names": [
+      "Marine Supplies / Ship Chandlers Retailer",
+      "Marine Supply Store"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 569101,
+    "nameCode": "Retail - Shoes / Boots",
+    "names": [
+      "Shoe Store",
+      "Boot Store",
+      "Footwear Store"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 569501,
+    "nameCode": "Retail - Clothing (Men's, no Children's)",
+    "names": [
+      "Men`s Clothing Store (No Children's)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 571101,
+    "nameCode": "Retail - Fine Art (incl. Restoration)",
+    "names": [
+      "Fine Art Store (including Restoration)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 571102,
+    "nameCode": "Retail - Antiques",
+    "names": [
+      "Retail - Antiques"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 571201,
+    "nameCode": "Retail - Carpets / Rugs / Draperies / Linens / Tile (No Off Premises Install/Repair, No Fine / Antique Rugs)",
+    "names": [
+      "Carpet Store"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 571302,
+    "nameCode": "Retail - Furniture / Appliances (Used)",
+    "names": [
+      "Retail - Furniture / Appliances (Used)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 571401,
+    "nameCode": "Retail - Electronics (Consumer / Office, No Off Premises Install/Repair)",
+    "names": [
+      "Retail - Electronics (Consumer / Office, No Off Premises Install/Repair)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 571601,
+    "nameCode": "Retail - Carpets / Rugs / Draperies / Linens / Tile (Install / Repair Off Premises, No Fine / Antique Rugs)",
+    "names": [
+      "Carpet Store (Install / Repair Off Premises, No Fine / Antique Rugs)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 571701,
+    "nameCode": "Retail - Furniture / Appliances / Lighting Fixtures (Install / Repair Off Premises)",
+    "names": [
+      "Retail - Furniture / Appliances / Lighting Fixtures (Install / Repair Off Premises)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 581101,
+    "nameCode": "Restaurants (No Liquor License)",
+    "names": [
+      "Restaurants (No Liquor License)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 581401,
+    "nameCode": "Restaurants (Take Out / Delivery - No Table Service)",
+    "names": [
+      "Restaurants (Take Out / Delivery - No Table Service)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 581402,
+    "nameCode": "Restaurants (Food Court / Food Cart)",
+    "names": [
+      "Restaurants (Food Court / Food Cart)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 592002,
+    "nameCode": "Retail - Beer / Wine Stores (Brew Your Own)",
+    "names": [
+      "Retail - Beer / Wine Stores (Brew Your Own)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 593201,
+    "nameCode": "Retail - Sporting Goods (No Firearms / Ammunition)",
+    "names": [
+      "Retail - Sporting Goods (No Firearms / Ammunition)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 596001,
+    "nameCode": "Retail - Farm / Garden / Lawn Light Supplies",
+    "names": [
+      "Retail - Farm / Garden / Lawn Light Supplies"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 598301,
+    "nameCode": "Ice Dealers",
+    "names": [
+      "Ice Dealers"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 599201,
+    "nameCode": "Retail - Cleaning / Repair of Shoes / Boots / Hats",
+    "names": [
+      "Shoe Repair"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 599402,
+    "nameCode": "Retail - Pets",
+    "names": [
+      "Pet Store"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 599501,
+    "nameCode": "Retail - Country General Stores",
+    "names": [
+      "General Store"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 599601,
+    "nameCode": "Retail - Dry Goods / Luggage / Religious Goods / Handicraft",
+    "names": [
+      "Retail - Dry Goods / Luggage / Religious Goods / Handicraft"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 599602,
+    "nameCode": "Retail- Musical Instruments (Sales/Repairs)",
+    "names": [
+      "Retail- Musical Instruments (Sales/Repairs)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 599603,
+    "nameCode": "Retail - Toys",
+    "names": [
+      "Toy Store"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 599701,
+    "nameCode": "Retail - Cameras / Photography Supplies",
+    "names": [
+      "Photography Store (Cameras / Supplies)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 599801,
+    "nameCode": "Retail - Dollar Stores / Limited Price Range Stores",
+    "names": [
+      "Dollar Store"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 614001,
+    "nameCode": "Finullce Companies (Personal Credit Institutions)",
+    "names": [
+      "Personal Credit Institution",
+      "Loan Bank"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 615001,
+    "nameCode": "Investment Institutions",
+    "names": [
+      "Investment Firm",
+      "Investment Bank"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 621001,
+    "nameCode": "Stock / Security Brokers / Dealers",
+    "names": [
+      "Stock Broker",
+      "Security Broker",
+      "Stock Dealer",
+      "Security Dealer"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 623001,
+    "nameCode": "Commodity Brokers / Dealers",
+    "names": [
+      "Commodity Brokers / Dealers"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 625001,
+    "nameCode": "Currency Brokers / Exchanges",
+    "names": [
+      "Currency Brokers / Exchanges"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 641101,
+    "nameCode": "Accountants / Auditors",
+    "names": [
+      "Accountants / Auditors"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 641201,
+    "nameCode": "Insurance Agents / Brokers / Adjusters",
+    "names": [
+      "Insurance Agents / Brokers / Adjusters"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 641301,
+    "nameCode": "Mortgage Brokers / Loan Correspondents",
+    "names": [
+      "Mortgage Broker",
+      "Loan Correspondent"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 641501,
+    "nameCode": "Finullcial Planners / Advisors",
+    "names": [
+      "Finullcial Planners / Advisors"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 651101,
+    "nameCode": "Building Owner - Multiple Occupancy - Office",
+    "names": [
+      "Building Owner - Multiple Occupancy - Office"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 651102,
+    "nameCode": "Condominium Corporation - Multiple Occupancy - Office",
+    "names": [
+      "Condominium Corporation - Multiple Occupancy - Office"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 651201,
+    "nameCode": "Building Owner - Single Occupancy - Office",
+    "names": [
+      "Building Owner - Single Occupancy - Office"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 651202,
+    "nameCode": "Condominium Unit Owner (Rented to others) - Single Occupancy - Office",
+    "names": [
+      "Condominium Unit Owner (Rented to others) - Single Occupancy - Office"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 722101,
+    "nameCode": "Dry Cleaning (Customer Drop-Off Only)",
+    "names": [
+      "Dry Cleaning (Customer Drop-Off Only)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 729501,
+    "nameCode": "Photography Developing / Printing Services",
+    "names": [
+      "Photography Developing / Printing Services"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 729601,
+    "nameCode": "Beauty Parlours / Barber Shops (Hairstyling / Manicures / Pedicures Only, No Estheticians)",
+    "names": [
+      "Barber",
+      "Hairstylist"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 730101,
+    "nameCode": "Restaurant Cooking / Exhaust Systems Maintenullce / Cleaning",
+    "names": [
+      "Restaurant Cooking / Exhaust Systems Maintenullce / Cleaning"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 731101,
+    "nameCode": "Advertising Sign Rental & Lease",
+    "names": [
+      "Advertising Sign Rental"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 731201,
+    "nameCode": "Advertising Agencies",
+    "names": [
+      "Advertising Agencies"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 732001,
+    "nameCode": "Collection Agencies (no repossessions)",
+    "names": [
+      "Collection Agency (no repossessions)",
+      "Collection Services (no repossessions)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 732101,
+    "nameCode": "Chimney Sweep",
+    "names": [
+      "Chimney Sweep"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 739101,
+    "nameCode": "Exterminating / Fumigation Operations (Indoors)",
+    "names": [
+      "Exterminating / Fumigation Operations (Indoors)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 739201,
+    "nameCode": "Window Cleaning / Eavestrough Cleaning (Low rise - 3 stories or less)",
+    "names": [
+      "Window Cleaning / Eavestrough Cleaning (Low rise - 3 stories or less)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 739601,
+    "nameCode": "Burglar / Fire Alarm Monitoring Operations (incl. Installation)",
+    "names": [
+      "Burglar / Fire Alarm Monitoring Operations (incl. Installation)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 740001,
+    "nameCode": "Copying / Duplicating Service (Quick Printers)",
+    "names": [
+      "Print Shop",
+      "Copy Shop"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 740101,
+    "nameCode": "Auctioneer's Operations",
+    "names": [
+      "Auctioneer"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 740401,
+    "nameCode": "Linen / Towel / Diaper / Uniform Supply",
+    "names": [
+      "Linen / Towel / Diaper / Uniform Supply"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 740501,
+    "nameCode": "Employment Agencies",
+    "names": [
+      "Staffing Agency"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 740601,
+    "nameCode": "Mailing / Addressing Companies",
+    "names": [
+      "Mailing Services"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 740802,
+    "nameCode": "Bookkeeping Services",
+    "names": [
+      "Bookkeeping Services"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 740804,
+    "nameCode": "Alternative Dispute Resolution (ADR) Incl. Arbitrators and Mediators",
+    "names": [
+      "Arbitrator",
+      "Mediator"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 740805,
+    "nameCode": "Answering Services (non-medical & no dispatch)",
+    "names": [
+      "Answering Services (non-medical & no dispatch)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 740806,
+    "nameCode": "Call Centres - No Dispatch",
+    "names": [
+      "Call Centres - No Dispatch"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 740807,
+    "nameCode": "Court Reporters & Transcription Services",
+    "names": [
+      "Reporting Services",
+      "Reporting & Transcription",
+      "Transcription Services"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 740809,
+    "nameCode": "Technology Customer Support Services (For others)",
+    "names": [
+      "Call Centres - No Dispatch"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 740901,
+    "nameCode": "Piano Tuning",
+    "names": [
+      "Piano Tuning"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 754201,
+    "nameCode": "Automobile Storage",
+    "names": [
+      "Vehicle Storage",
+      "Car Storage"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 754401,
+    "nameCode": "Auto Appraisal Services",
+    "names": [
+      "Auto Appraiser"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 769101,
+    "nameCode": "Repair Shops - Household Electronics / Appliances",
+    "names": [
+      "Repair Shops - Household Electronics / Appliances"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 801001,
+    "nameCode": "Obstetricians",
+    "names": [
+      "Obstetricians"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 891101,
+    "nameCode": "Appraisers (No Auto Appraisers)",
+    "names": [
+      "Appraisers (No Auto Appraisers)"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 891201,
+    "nameCode": "Land Surveyors",
+    "names": [
+      "Land Surveyor"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 891301,
+    "nameCode": "Boiler / Elevator Inspection Services",
+    "names": [
+      "Boiler / Elevator Inspection Services"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 891401,
+    "nameCode": "Geophysical Services (Incl Soil Testing)",
+    "names": [
+      "Geophysical Consultant",
+      "Soil Testing"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 891501,
+    "nameCode": "Architects",
+    "names": [
+      "Architects"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 891601,
+    "nameCode": "Engineers",
+    "names": [
+      "Engineers"
+    ]
+  },
+  {
+    "classification": null,
+    "code": 891701,
+    "nameCode": "Insurance Inspection Services",
+    "names": [
+      "Insurance Inspection Services"
+    ]
+  }
+]

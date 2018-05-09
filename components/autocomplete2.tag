@@ -9,8 +9,7 @@
             <tr each="{item in shownItems}" tabindex="0"
                 onclick={onItemClicked} onkeydown={onItemKeyDown} onblur={onAnyBlur}>
                 <td>
-                    <strong>{item.name}</strong> <br/>
-                    <em>{item.description}</em>
+
                 </td>
             </tr>
             <tr if={shown && shownItems.length == 0}>
