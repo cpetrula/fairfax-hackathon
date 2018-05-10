@@ -28,7 +28,7 @@
 	
 	<div class="payment-container">
 		<span class="monthly-payment-amount"></span> <span class="monthly-payment-text">per month</span>
-		<button id="buy-now-btn" class="btn btn-danger">Buy Now</button>
+		<button id="buy-now-btn" class="btn btn-danger" onclick={showBuyNow}>Buy Now</button>
 	</div>
 	<script>
 		var _this=this;
@@ -45,7 +45,7 @@
 		})
 		
 		startQuote (result) {
-			riot.mount('#calculator-components','quote-form2',{data:result})
+            this.quoteForm2 = riot.mount('#calculator-components','quote-form2',{data:result})[0];
 			entity=result;
 			var params=result.result.parameters;
 		
@@ -64,8 +64,20 @@
 		}
 		
 		updatePaymentDisplay (payment) {
+            this.payment = payment;
 			$(".monthly-payment-amount",_this.root).html("$"+payment);
 		}
+
+        showBuyNow() {
+            var coverages = this.quoteForm2.getValues();
+            // console.log(coverages);
+
+            var query = coverages.map((cov) => `&${cov.code}=${cov.value}`).reduce((a,b) => a + b);
+            var url = "/buynow.html?" + query + "&PRICE=" + this.payment;
+
+            console.log(url);
+            window.location.href = url;
+        }
 	</script>
 	<style scope>
 		.top-bar {

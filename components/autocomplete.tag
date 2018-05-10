@@ -1,5 +1,5 @@
 <autocomplete>
-    <div ref="container" onblur={onAllBlur}>
+    <div ref="container" onblur={onAllBlur} class="range-slider-container">
         <input ref="input" type="text"
                placeholder={placeholder} name={name}
                class={form-control: true, focus: shown}
@@ -31,7 +31,7 @@
             outline: 0;
             box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
         }
-        .container {
+        .range-slider-container {
             position: relative;
         }
         table {
@@ -143,14 +143,23 @@
 
         score(text) {
             //todo: use better a text search alg. (order by score, limit results)
+            var numFound = 0;
             return this.items.filter((item) => {
+                if (numFound >= 6) {
+                    return false;
+                }
+
                 var name = item.name.toLowerCase();
                 if (name.indexOf(text) !== -1) {
+                    numFound++
                     return true;
                 }
 
                 if (item.synonyms) {
-                    return item.synonyms.some((syn) => syn.toLowerCase().indexOf(text) !== -1);
+                    if (item.synonyms.some((syn) => syn.toLowerCase().indexOf(text) !== -1)) {
+                        numFound++;
+                        return true;
+                    }
                 }
 
                 return false;
