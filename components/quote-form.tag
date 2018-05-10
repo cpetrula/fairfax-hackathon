@@ -12,7 +12,7 @@
 			<autocomplete name="business-name" placeholder="What is your business name?" remote-url="https://maps.googleapis.com/maps/api/place/autocomplete/json?key=AIzaSyBhjVl_50JNJBzOEGUuxY7tZY0E1tn7ll0&radius=100&type=establishment&location=43.6565353,-79.6010313&input=" />
 			-->
 		<div class="business-info">
-			
+			Business Type: {business}
 		</div>
 		<div class="row">
 			<div class="col-md-6">
@@ -58,7 +58,7 @@
 		})
 		
 		startQuote (result) {
-			entity=result
+			entity=result;
 			$("#hp-top,#hp-bottom").hide(500);
 			$(".top-bar,.payment-container,.calculator-container",_this.root).show();		
 			
@@ -108,8 +108,12 @@
 			
 // 			payment=generalLiabilityCoverage*.0002;
 			var business=entity.result.parameters.business;
+			var province=entity.result.parameters.Province;
+			this.business=business;
+			this.province=province;
+			this.update();
 			var c=getCoveragesForPrimaryName(business);
-			getMonthlyQuote("Drywaller","ON",100000,c)
+			getMonthlyQuote(business,province,100000,c);
 			return payment;
 		}
 		updatePaymentDisplay () {

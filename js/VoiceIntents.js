@@ -113,7 +113,7 @@ sol.VoiceIntents = (function() {
 			var params = response.result.paramaters;
 			console.log("quote function")
 			console.log(response);
-			window.sol.tagIdMap["quote-form"].startQuote();
+			window.sol.tagIdMap["quote-form"].startQuote(response);
 		}
     /*
     var claims = function (response) {
