@@ -25,20 +25,16 @@
 
 
     <script>
-			console.log(opts)
-			var _this=this;
         this.label = opts.label || "<nolabel>";
         this.name = opts.name || "";
-				this.default_value = parseInt(opts.default_value);
         this.coverages = opts.coverages || [
             0,100,200
         ];
+        this.defaultValue = parseInt(opts.default_value) || 0;
         this.ion = null;
 
         this.on('mount', () => {
             this.initBoolean();
-
-            window.temp1 = this;
         });
 
         this.on('update', () => {
@@ -71,7 +67,7 @@
 
         initBoolean() {
             if (!this.isBoolean()) {
-                console.log("init ion");
+                // console.log("init ion");
                 if (this.ion) {
                     this.ion.data("ionRangeSlider").destroy();
                 }
@@ -81,8 +77,9 @@
                 this.ion = $(this.refs.input).ionRangeSlider({
                     type: "single",
                     grid: true,
-										grid_snap: true,
+                    grid_snap: true,
                     values: this.coverages,
+                    from: this.coverages.indexOf(this.defaultValue),
                     prefix: "$",
                     keyboard: true,
                     onChange: () => {
@@ -94,13 +91,23 @@
                         });
                     }
                 });
-							this.ion = $(this.refs.input).data("ionRangeSlider");
-							this.ion.update({from:_this.default_value})
-							          this.trigger('input', {
+                console.log({
+                    type: "single",
+                    grid: true,
+                    grid_snap: true,
+                    values: this.coverages,
+                    from: this.defaultValue,
+                    prefix: "$",
+                    keyboard: true,
+                    onChange: () => {
+                        var value = this.refs.input.value;
+                        // console.log("onChange", value);
+                        this.trigger('input', {
                             name: this.name,
-                            value: parseInt(_this.defaultValue)
+                            value: parseInt(value)
                         });
-
+                    }
+                });
             }
         }
 

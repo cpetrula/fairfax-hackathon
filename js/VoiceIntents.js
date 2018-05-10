@@ -88,11 +88,17 @@ sol.VoiceIntents = (function() {
 			window.sol.tagIdMap["quote-form"].startQuote(response);
 		}
 
+		var buyNow = function(response) {
+            var params = response.result.paramaters;
+            window.sol.tagIdMap["quote-form"].showBuyNow();
+        }
+
     var intents = {
         "my.location": myLocation,
 				"site.navigation": navigation,
 				"quote.get":quote,
-        "start.over": function() {location.reload(); }
+        "start.over": function() {location.reload(); },
+        "buy.now": buyNow
         // "user.interface": userInterface,
         // "cp.print": print,
         // "cp.claims": claims,
