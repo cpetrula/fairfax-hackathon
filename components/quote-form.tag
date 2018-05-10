@@ -13,7 +13,7 @@
       </p>
       <hr />
 			Business Type: {business}<br />
-			Province: {province}
+			Province: {provinceName}
 		</div>
 		<div id="calculator-components"></div>
 	</div>
@@ -58,8 +58,23 @@
 			var params=result.result.parameters;
 		
 			this.business=params.business;
-			this.province=params.Province;
-			$("#hp-top,#hp-bottom,.questions-container").hide(500);
+			this.province=params.ProvinceName;
+			var provinceNames =
+				{ "BC": "British Columbia" ,
+				"AB": "Alberta" ,
+				"SK": "Saskatchewan" ,
+				"MB": "Manitoba" ,
+				"ON": "Ontario" ,
+				"QC": "Quebec" ,
+				"NB": "New Brunswick" ,
+				"PE": "Prince Edward Island" ,
+				"NS": "Nova Scotia" ,
+				"NL": "Newfoundland and Labrador" ,
+				"YK": "Yukon" ,
+				"NT": "Northwest Territories" ,
+				"NU": "Nunavut" };
+			this.provinceName = provinceNames[this.province];
+            $("#hp-top,#hp-bottom,.questions-container").hide(500);
 			$(".top-bar,.payment-container,.calculator-container",_this.root).show();	
 			this.update();
 		}
