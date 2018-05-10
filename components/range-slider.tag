@@ -68,9 +68,11 @@
         increaseRangeValue(offset) {
             var offset = offset || 1;
             var slider = $(this.ion).data("ionRangeSlider");
-            slider.update({
-                from: slider.result.from + offset
-            });
+            if (slider) {
+                slider.update({
+                    from: slider.result.from + offset
+                });
+            }
         }
 
         decreaseRangeValue(offset) {

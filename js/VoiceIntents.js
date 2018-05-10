@@ -100,10 +100,26 @@ sol.VoiceIntents = (function() {
             var quoteForm2 = quoteForm.quoteForm2;
 
             // params.con
-            if (params["Coverage_direction1"] == 1 ||params["Coverage_direction1"] == "up") {
-                quoteForm2.getSliderByName(params["Coverage_type"]).increaseRangeValue();
-            } else if (params["Coverage_direction1"] == 0 ||params["Coverage_direction1"] == "down") {
-                quoteForm2.getSliderByName(params["Coverage_type"]).decreaseRangeValue();
+            var coverage_type = params["Coverage_type"];
+            var coverage_direction = params["Coverage_direction"];
+            if (coverage_type == "INSTALLATION" || coverage_type == "DATA") {
+                if (coverage_direction == 1 || coverage_direction == "up") {
+                    var radio_button = $("input[name='" + coverage_type + "][ref='yes']");
+                    if (radio_button) {
+                        radio_button.attr('checked', true);
+                    }
+                } else if (coverage_direction == 1 || coverage_direction == "up") {
+                    var radio_button = $("input[name='" + coverage_type + "][ref='no']");
+                    if (radio_button) {
+                        radio_button.attr('checked', true);
+                    }
+                }
+            } else {
+                if (coverage_direction == 1 || coverage_direction == "up") {
+                    quoteForm2.getSliderByName(coverage_type).increaseRangeValue();
+                } else if (coverage_direction == 0 || coverage_direction == "down") {
+                    quoteForm2.getSliderByName(coverage_type).decreaseRangeValue();
+                }
             }
         }
 
