@@ -116,7 +116,7 @@ var getBusinessContentQuote =  function(primaryName, province, coverage) {
 
     var coverage_limit = "coverageLimit-UP_TO_25K";
     if (coverage <= 25000) {
-        coverage_limit = "coverageLimit-UP_TO_25    K";
+        coverage_limit = "coverageLimit-UP_TO_25K";
     } else if (coverage <= 100000) {
         coverage_limit = "coverageLimit-UP_TO_100K";
     } else if (coverage <= 250000) {
