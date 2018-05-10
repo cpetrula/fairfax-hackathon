@@ -94,13 +94,16 @@ sol.VoiceIntents = (function() {
         }
 
         var myIntent = function(response) {
-            var params = response.result.paramaters;
+            var params = response.result.parameters;
 
             var quoteForm = window.sol.tagIdMap["quote-form"];
             var quoteForm2 = quoteForm.quoteForm2;
 
-            quoteForm2.getSliderByName("CDL").increaseRangeValue();
-            quoteForm2.getSliderByName("CDL").decreaseRangeValue();
+            // params.con
+            if (params["direction"] == 1 ||params["direction"] == "up") {
+                quoteForm2.getSliderByName(params["Coverage_type"]).increaseRangeValue();
+            } else if (params["direction"] == 0 ||params["direction"] == "down") {
+                quoteForm2.getSliderByName(params["Coverage_type"]).decreaseRangeValue();
         }
 
     var intents = {
@@ -110,7 +113,7 @@ sol.VoiceIntents = (function() {
         "start.over": function() {location.reload(); },
         "buy.now": buyNow,
         "quote.get":quote,
-        "my.intent": myIntent
+        "slider.prompt": myIntent
         // "user.interface": userInterface,
         // "cp.print": print,
         // "cp.claims": claims,

@@ -69,12 +69,16 @@
             var offset = offset || 1;
             var slider = $(this.ion).data("ionRangeSlider");
             slider.update({
-                from: slider.result.from + offset;
+                from: slider.result.from + offset
             });
         }
 
-        decreaseRangeValue() {
-            increaseRangeValue(-1);
+        decreaseRangeValue(offset) {
+            var offset = offset || -1;
+            var slider = $(this.ion).data("ionRangeSlider");
+            slider.update({
+                from: slider.result.from + offset
+            });
         }
 
         initBoolean() {
