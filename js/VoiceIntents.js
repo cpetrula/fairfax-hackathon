@@ -6,7 +6,7 @@ sol.VoiceIntents = (function() {
         console.log(response);
         if (response.status.code===200) {
             var intentName=response.result.metadata.intentName;
-          	intents[intentName](response) || null;
+          	if (intents[intentName]) intents[intentName](response);
         }
     }
     var userInterface = function (response) {
@@ -98,7 +98,8 @@ sol.VoiceIntents = (function() {
 				"site.navigation": navigation,
 				"quote.get":quote,
         "start.over": function() {location.reload(); },
-        "buy.now": buyNow
+        "buy.now": buyNow,
+				"quote.get":quote
         // "user.interface": userInterface,
         // "cp.print": print,
         // "cp.claims": claims,

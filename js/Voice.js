@@ -10,7 +10,6 @@ sol.Voice = (function () {
     recognition.maxAlternatives = 1;
 
     recognition.addEventListener('speechstart', () => {
-        //setVoiceActivationIconToListening();
         console.log('Speech has been detected.');
     });
 
@@ -28,6 +27,24 @@ sol.Voice = (function () {
 				callTextRequest(text);
 
     });
+     var setVoiceActivationIconToActive = function () {
+        var icon=$("#voice-indicator-icon");
+        icon.removeClass("voice-indicator-pulse-inactive");
+        icon.addClass("voice-indicator-pulse-active");
+        $(".fa-circle",icon).removeClass("voice-indicator-icon-circle-inactive");
+        $(".fa-circle",icon).addClass("voice-indicator-icon-circle-active");
+        $(".fa-microphone",icon).removeClass("voice-indicator-icon-mic-inactive");
+        $(".fa-microphone",icon).addClass("voice-indicator-icon-mic-active");
+    }
+    var setVoiceActivationIconToInactive = function () {
+        var icon=$("#voice-indicator-icon");
+        icon.addClass("voice-indicator-pulse-inactive");
+        icon.removeClass("voice-indicator-pulse-active");
+        $(".fa-circle",icon).addClass("voice-indicator-icon-circle-inactive");
+        $(".fa-circle",icon).removeClass("voice-indicator-icon-circle-active");
+        $(".fa-microphone",icon).addClass("voice-indicator-icon-mic-inactive");
+        $(".fa-microphone",icon).removeClass("voice-indicator-icon-mic-active");
+    }
 		function callTextRequest(text) {
         var promise = client.textRequest(text);
 
@@ -37,6 +54,9 @@ sol.Voice = (function () {
 		}
     recognition.onstart = function () {
       console.log("I'm listening to you...");
+      window.setTimeout(function() {
+         setVoiceActivationIconToActive();
+      },1000);
     }
     recognition.onend = function () {
         if (keepActive) {
@@ -45,6 +65,9 @@ sol.Voice = (function () {
         else {
 						console.log("ended")
             setVoiceActivationIconToInactive();
+            setTimeout(function() {
+              init();
+            },1000)
         }
     }
     recognition.addEventListener('speechend', () => {
@@ -62,9 +85,9 @@ sol.Voice = (function () {
 
     var startListening = function () {
         keepActive=true;
+        setVoiceActivationIconToActive();
         recognition.start();
-        //setVoiceActivationIconToActive();
-        //setVoiceActivationIconToIdle();
+       
     }
 
     var stopListening = function () {
@@ -89,25 +112,6 @@ sol.Voice = (function () {
         else {
             stopListening();
         }
-    }
-
-    var setVoiceActivationIconToActive = function () {
-        var icon=$("#voice-indicator-icon");
-        icon.removeClass("voice-indicator-pulse-inactive");
-        icon.addClass("voice-indicator-pulse-active");
-        $(".fa-circle",icon).removeClass("voice-indicator-icon-circle-inactive");
-        $(".fa-circle",icon).addClass("voice-indicator-icon-circle-active");
-        $(".fa-microphone",icon).removeClass("voice-indicator-icon-mic-inactive");
-        $(".fa-microphone",icon).addClass("voice-indicator-icon-mic-active");
-    }
-    var setVoiceActivationIconToInactive = function () {
-        var icon=$("#voice-indicator-icon");
-        icon.addClass("voice-indicator-pulse-inactive");
-        icon.removeClass("voice-indicator-pulse-active");
-        $(".fa-circle",icon).addClass("voice-indicator-icon-circle-inactive");
-        $(".fa-circle",icon).removeClass("voice-indicator-icon-circle-active");
-        $(".fa-microphone",icon).addClass("voice-indicator-icon-mic-inactive");
-        $(".fa-microphone",icon).removeClass("voice-indicator-icon-mic-active");
     }
     function setVoiceActivationIconToIdle () {
         $("#voice-indicator-icon").addClass("voice-indicator-icon-idle");
