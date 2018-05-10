@@ -127,7 +127,7 @@ var getBusinessContentQuote =  function(primaryName, province, coverage) {
         var pn = mainList[i].primaryName.toLowerCase();
         var pv = mainList[i].province_code;
 
-        if (primaryName.toLowerCase(); == pn && pv.includes(province)) {
+        if (primaryName.toLowerCase() == pn && pv.includes(province)) {
             return mainList[i][coverage_limit];
         }
     }
