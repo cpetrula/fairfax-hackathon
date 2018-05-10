@@ -12,7 +12,8 @@
 			<autocomplete name="business-name" placeholder="What is your business name?" remote-url="https://maps.googleapis.com/maps/api/place/autocomplete/json?key=AIzaSyBhjVl_50JNJBzOEGUuxY7tZY0E1tn7ll0&radius=100&type=establishment&location=43.6565353,-79.6010313&input=" />
 			-->
 		<div class="business-info">
-			Business Type: {business}
+			Business Type: {business}<br />
+			Province: {province}
 		</div>
 		<div class="row">
 			<div class="col-md-6">
