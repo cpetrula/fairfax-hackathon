@@ -130,5 +130,13 @@
 
             return coverages;
         }
+
+        getSliderByName(code) {
+            var slider = this.tags["range-slider"].find((slider) => {
+                return slider.name === code;
+            });
+
+            return slider;
+        }
     </script>
 </quote-form2>

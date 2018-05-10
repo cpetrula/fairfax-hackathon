@@ -1,5 +1,5 @@
 <autocomplete>
-    <div class="container" ref="container" onblur={onAllBlur}>
+    <div ref="container" onblur={onAllBlur}>
         <input ref="input" type="text"
                placeholder={placeholder} name={name}
                class={form-control: true, focus: shown}
@@ -8,7 +8,13 @@
         <table show={shown} ref="optionsList" cellspacing="0">
             <tr each="{item in shownItems}" tabindex="0"
                 onclick={onItemClicked} onkeydown={onItemKeyDown} onblur={onAnyBlur}>
-                <td><strong>{item.name}</strong></td>
+                <td>
+                    <strong>{item.name}</strong>
+                    <span if={item.descr}>
+                        <br/>
+                        <em>{item.descr}</em>
+                    </span>
+                </td>
             </tr>
             <tr if={shown && shownItems.length == 0}>
                 <td>{emptyText}</td>

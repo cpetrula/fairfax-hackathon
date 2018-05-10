@@ -1,0 +1,70 @@
+[
+  {
+    "name": "Electrician",
+    "descr": "I am an electrician that does residential or commercial work",
+    "followUp": [
+      "What kind of electrical work do you do?"
+    ]
+  },
+  {
+    "name": "Drywaller",
+    "descr": "I do drywall installation or repair",
+    "synonyms": [
+      "Drywall Installation",
+      "Drywall Repair"
+    ]
+  },
+  {
+    "name": "Landscaper",
+    "descr": "I do landscaping or gardening for others",
+    "followUp": [
+      "Do you use pesticides or herbicides in your work?"
+    ],
+    "synonyms": [
+      "Landscape Contractor",
+      "Gardener"
+    ]
+  },
+  {
+    "name": "Dog Walker",
+    "descr": "I walk dog for other people"
+  },
+  {
+    "name": "Dog Kennel",
+    "descr": "I board dogs for other people",
+    "synonyms": [
+      "Dog Boarding"
+    ]
+  },
+  {
+    "name": "Photographer/Videographer",
+    "descr": "I take photos or videos at events or at a studio",
+    "synonyms:": [
+      "Videographer",
+      "Photographer",
+      "Photography Studio"
+    ],
+    "followUp": [
+      "Do you do destination events outside of Cananda?"
+    ]
+  },
+  {
+    "name": "Restaurant",
+    "descr": "I run or own a restaurant that sells food and/or drinks",
+    "synonyms": [
+      "Coffee Shop",
+      "Bakery"
+    ]
+  },
+  {
+    "name": "Clothing Store",
+    "descr": "I run or own a store that sells clothing",
+    "synonyms": [
+      "Retail"
+    ],
+    "followUp": [
+      "What kind of clothing do you sell?"
+    ]
+  }
+
+]

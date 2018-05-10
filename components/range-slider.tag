@@ -65,6 +65,18 @@
             return this.isBoolean() ? (this.refs.yes.checked + 0) : parseInt(this.refs.input.value);
         }
 
+        increaseRangeValue(offset) {
+            var offset = offset || 1;
+            var slider = $(this.ion).data("ionRangeSlider");
+            slider.update({
+                from: slider.result.from + offset;
+            });
+        }
+
+        decreaseRangeValue() {
+            increaseRangeValue(-1);
+        }
+
         initBoolean() {
             if (!this.isBoolean()) {
                 // console.log("init ion");

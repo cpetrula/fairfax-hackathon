@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Fairfax Hackathon</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta charset="utf-8">
+		<!--//<meta name="viewport" content="width=device-width, initial-scale=1">//-->
+	    <meta name="viewport" content="width=device-width">
+	    <meta name="HandheldFriendly" content="True">
+	    <meta name="MobileOptimized" content="320">
+
+	    <!-- Mobile iOS stuff -->
+	    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> <!--320-->
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+	    <meta name="apple-mobile-web-app-title" content="">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/riot/3.9.4/riot+compiler.min.js"></script>
+        <script defer async src="https://use.fontawesome.com/releases/v5.0.12/js/all.js" integrity="sha384-Voup2lBiiyZYkRto2XWqbzxHXwzcm4A5RfdfG6466bu5LqjwwrjXCMBQBLMWh7qR" crossorigin="anonymous"></script>
+    </head>
+<body>
+
+<Br/><br/>
+    <app3/>
+
+    <!-- riot tags -->
+    <script type="riot/tag" src="components/app3.tag"></script>
+    <script type="riot/tag" src="components/autocomplete.tag"></script>
+    <script type="riot/tag" src="components/location-test.tag"></script>
+	
+    <script>
+        window.sol = window.sol || {};
+        var FindMyTagMixin = {
+            init: function (opts) {
+                this.on('mount',() => {
+                    window.sol.tagIdMap = window.sol.tagIdMap || {};
+                    var id = opts.id || this.root.getAttribute("id");
+                    if (id) {
+                        window.sol.tagIdMap[id] = this;
+                    }
+                })
+            }
+        };
+        riot.compile(function() {
+            riot.mixin(FindMyTagMixin);
+            window.sol.tags=riot.mount('*')
+        });
+    </script>
+
+</body>
+</html>

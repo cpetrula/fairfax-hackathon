@@ -93,13 +93,24 @@ sol.VoiceIntents = (function() {
             window.sol.tagIdMap["quote-form"].showBuyNow();
         }
 
+        var myIntent = function(response) {
+            var params = response.result.paramaters;
+
+            var quoteForm = window.sol.tagIdMap["quote-form"];
+            var quoteForm2 = quoteForm.quoteForm2;
+
+            quoteForm2.getSliderByName("CDL").increaseRangeValue();
+            quoteForm2.getSliderByName("CDL").decreaseRangeValue();
+        }
+
     var intents = {
         "my.location": myLocation,
 				"site.navigation": navigation,
 				"quote.get":quote,
         "start.over": function() {location.reload(); },
         "buy.now": buyNow,
-				"quote.get":quote
+        "quote.get":quote,
+        "my.intent": myIntent
         // "user.interface": userInterface,
         // "cp.print": print,
         // "cp.claims": claims,
