@@ -3,7 +3,7 @@
 	<div class="questions-container">
 			<h2>Let's get you some options!</h2>
 			<p class="help-text">Just start typing or use your voice.</p>
-			<autocomplete name="business-type" placeholder="What kind of business do you have?" url="/data/businesses.json" />		
+			<autocomplete name="business-type" placeholder="What kind of business do you have?" url="/data/businesses2.json" />
 		</div>
 	
 	<div class="calculator-container">
@@ -24,7 +24,6 @@
 		<location1></location1>
 	</p>
 	-->
-
 	
 	<div class="payment-container">
 		<span class="monthly-payment-amount"></span> <span class="monthly-payment-text">per month</span>
@@ -45,7 +44,7 @@
 		})
 		
 		startQuote (result) {
-			riot.mount('#calculator-components','quote-form2',{data:result})
+			riot.mount('#calculator-components','quote-form2',{data:result}) //wtf?
 			entity=result;
 			var params=result.result.parameters;
 		
@@ -55,7 +54,7 @@
 			$(".top-bar,.payment-container,.calculator-container",_this.root).show();	
 			this.update();
 		}
-			
+
 		increaseGeneralLiability () {
 			var gls=generalLiabilitySlider;
 			var step=gls.options.step;

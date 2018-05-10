@@ -75,6 +75,12 @@
     "classification": "CONTRACTING",
     "code": 175202,
     "nameCode": "Handyman/Handywoman",
+    "name": "Handy woman"
+  },
+  {
+    "classification": "CONTRACTING",
+    "code": 175202,
+    "nameCode": "Handyman/Handywoman",
     "name": "Home Repair - Miscellaneous"
   },
   {

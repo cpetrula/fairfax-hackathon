@@ -6,7 +6,7 @@
 			<p class="lead">
 				<i class="fas fa-microphone"></i>
 				Voice commands allow you to get a quote within seconds.
-				<br /><span class="lead example">Example: Say "Show me the minimum coverage for &lt;business type&gt; in &lt;province&gt;</span>
+				<br /><span class="lead example">Example: Say "Show me the coverage for a &lt;business type&gt; in &lt;province&gt;</span>
 			</p>
 		</div>
 	</div>
