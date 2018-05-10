@@ -87,7 +87,6 @@ var getCoveragesForPrimaryName = function(primaryName) {
         coverages.push(c);
     }
     if (_isPrimaryNameInArray(business_interruption_coverage, primaryName)) {
-        coverages.push("INTERRUPTION");
         var c = {
             code: "INTERRUPTION",
             name: "Enable Coverage",
