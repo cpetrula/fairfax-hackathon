@@ -142,5 +142,44 @@
 
             return slider;
         }
+
+        showMinCoverage() {
+            this.tags["range-slider"].forEach((slider) => {
+                if (slider.refs.no) {
+                    slider.refs.no.checked = true;
+                } else {
+                    $(slider.ion).data("ionRangeSlider").update({
+                        from: 0
+                    });
+                }
+            });
+            this.rangeSliderChanged();
+
+            if (window.speechSynthesis) {
+                var payment = window.sol.tagIdMap["quote-form"].payment;
+                var words = new SpeechSynthesisUtterance(`The price for minimum coverage is ${payment} dollars`);
+                window.speechSynthesis.speak(words);
+            }
+        }
+
+        showMaxCoverage() {
+            this.tags["range-slider"].forEach((slider) => {
+                if (slider.refs.yes) {
+                    slider.refs.yes.checked = true;
+                } else {
+                    $(slider.ion).data("ionRangeSlider").update({
+                        from: 1000000
+                    });
+                }
+            });
+            this.rangeSliderChanged();
+
+            if (window.speechSynthesis) {
+                var payment = window.sol.tagIdMap["quote-form"].payment;
+                var words = new SpeechSynthesisUtterance(`The price for maximum coverage is ${payment} dollars`);
+                window.speechSynthesis.speak(words);
+            }
+        }
+
     </script>
 </quote-form2>

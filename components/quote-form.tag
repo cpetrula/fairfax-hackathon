@@ -50,6 +50,7 @@
 			var coverages = getCoveragesForPrimaryName(result.result.parameters.business);
 			if (coverages.length === 0) {
 			    console.log(`no coverages for ${result.result.parameters.business}`)
+
 				return;
 			}
 

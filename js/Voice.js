@@ -28,13 +28,46 @@ sol.Voice = (function () {
 				callTextRequest(text);
 
     });
-		function callTextRequest(text) {
+
+    function callTextRequest(text) {
+        var interceptText = text.toLowerCase();
+        if (interceptText.indexOf("coverage") !== -1) {
+            if (interceptText.indexOf("minimum") !== -1) {
+                //intercept!
+                sol.VoiceIntents.search({
+                    status: {
+                        code: 200
+                    },
+                    result: {
+                        metadata: {
+                            intentName: "show.min.coverage"
+                        }
+                    }
+                });
+                return;
+            } else if (interceptText.indexOf("maximum") !== -1) {
+                //intercept!
+                sol.VoiceIntents.search({
+                    status: {
+                        code: 200
+                    },
+                    result: {
+                        metadata: {
+                            intentName: "show.max.coverage"
+                        }
+                    }
+                });
+                return;
+            }
+        }
+
         var promise = client.textRequest(text);
 
         promise
             .then(handleResponse)
-            .catch(handleError);			
-		}
+            .catch(handleError);
+    }
+
     recognition.onstart = function () {
       console.log("I'm listening to you...");
     }

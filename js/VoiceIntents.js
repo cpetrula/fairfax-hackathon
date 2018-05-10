@@ -123,6 +123,29 @@ sol.VoiceIntents = (function() {
             }
         }
 
+        var showMaxCoverage = function() {
+            var quoteForm = window.sol.tagIdMap["quote-form"];
+            var quoteForm2 = quoteForm ? quoteForm.quoteForm2 : null;
+
+            //show the max amount of coverage
+            console.log("showMaxCoverage", quoteForm2);
+            if (quoteForm2) {
+                quoteForm2.showMaxCoverage();
+            }
+        };
+
+        var showMinCoverage = function() {
+            var quoteForm = window.sol.tagIdMap["quote-form"];
+            var quoteForm2 = quoteForm ? quoteForm.quoteForm2 : null;
+
+            //show the min amount of coverage
+            console.log("showMinCoverage", quoteForm2);
+            if (quoteForm2) {
+                quoteForm2.showMinCoverage();
+            }
+
+        };
+
     var intents = {
         "my.location": myLocation,
 				"site.navigation": navigation,
@@ -130,7 +153,9 @@ sol.VoiceIntents = (function() {
         "start.over": function() {location.reload(); },
         "buy.now": buyNow,
         "quote.get":quote,
-        "slider.prompt": myIntent
+        "slider.prompt": myIntent,
+        "show.max.coverage": showMaxCoverage,
+        "show.min.coverage": showMinCoverage
         // "user.interface": userInterface,
         // "cp.print": print,
         // "cp.claims": claims,
