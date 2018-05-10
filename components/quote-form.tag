@@ -9,7 +9,7 @@
 	<div class="calculator-container">
 		<div class="business-info">
 			<h3>
-				Here is some text that describes what you are seeing and what to do with it.
+				Take a moment to review the coverage details below and change any slider simply with your voice!  If you are satisfied with the recommended amounts, click or say "Buy now" or say "Talk to an agent" for more assistance.
 			</h3>
 			Business Type: {business}<br />
 			Province: {province}
