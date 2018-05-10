@@ -104,6 +104,7 @@ sol.VoiceIntents = (function() {
                 quoteForm2.getSliderByName(params["Coverage_type"]).increaseRangeValue();
             } else if (params["direction"] == 0 ||params["direction"] == "down") {
                 quoteForm2.getSliderByName(params["Coverage_type"]).decreaseRangeValue();
+            }
         }
 
     var intents = {
