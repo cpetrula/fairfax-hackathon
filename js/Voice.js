@@ -24,14 +24,17 @@ sol.Voice = (function () {
         $("#voice-indicator-icon").attr("data-original-title",'"'+text+'"');
         $("#voice-indicator-icon").tooltip('show');        
 				console.log(text)
+
+				callTextRequest(text);
+
+    });
+		function callTextRequest(text) {
         var promise = client.textRequest(text);
 
         promise
             .then(handleResponse)
-            .catch(handleError);
-
-
-    });
+            .catch(handleError);			
+		}
     recognition.onstart = function () {
       console.log("I'm listening to you...");
     }
@@ -70,6 +73,7 @@ sol.Voice = (function () {
     }
 
     var handleResponse = function (serverResponse) {
+				console.log("handle response")
 				console.log(serverResponse)
         //setVoiceActivationIconToIdle();
         sol.VoiceIntents.search(serverResponse);
@@ -115,6 +119,7 @@ sol.Voice = (function () {
 
     return {
         init : init,
+				callTextRequest : callTextRequest,
         changeVoiceActivationStatus : changeVoiceActivationStatus
     }
 }());

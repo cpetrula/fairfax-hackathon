@@ -3,32 +3,17 @@
 	<div class="questions-container">
 			<h2>Let's get you some options!</h2>
 			<p class="help-text">Just start typing or use your voice.</p>
-			<!--
-			<input type="text" name="business-type" placeholder="What kind of business do you have?" class="form-control"/>
-			-->
-			<autocomplete name="business-type" placeholder="What kind of business do you have?" url="/data/businesses2.json" />
+			<autocomplete name="business-type" placeholder="What kind of business do you have?" url="/data/businesses.json" />		
+		</div>
 
-		<!--
-			<autocomplete name="business-name" placeholder="What is your business name?" remote-url="https://maps.googleapis.com/maps/api/place/autocomplete/json?key=AIzaSyBhjVl_50JNJBzOEGUuxY7tZY0E1tn7ll0&radius=100&type=establishment&location=43.6565353,-79.6010313&input=" />
-			-->
-		<div class="business-info">
+	
+
+	<div class="calculator-container">
+							<div class="business-info">
 			Business Type: {business}<br />
 			Province: {province}
 		</div>
-		<div class="row">
-			<div class="col-md-6">
-				<range-slider id="gen" label="General Liability" name="gen"></range-slider>
-			</div>
-		</div>
-
-	</div>
-
-	<div class="calculator-container">
-		<label>General Liability Coverage</label>
-		<input name="general-liability" />
-			<button id="test-btn">
-		Test to increase liability insurance
-	</button>
+<quote-form2></quote-form2>
 	</div>
 
 
