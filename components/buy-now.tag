@@ -19,12 +19,20 @@
                             <td>Value of Tools & Equipment:</td>
                             <td>{formatMoney(tools)}</td>
                         </tr>
+                        <tr if={interruption > 0}>
+                            <td>Business Interruption:</td>
+                            <td>{formatMoney(interruption)}</td>
+                        </tr>
                         <tr if={data > 0}>
                             <td>Cyber Risk & Data Breach:</td>
                             <td>Yes</td>
                         </tr>
                         <tr if={installation > 0}>
                             <td>Installation Liability</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr if={error > 0}>
+                            <td>Personal Errors</td>
                             <td>Yes</td>
                         </tr>
                     </table>
@@ -206,14 +214,6 @@
     </style>
     <script>
 
-        this.descrMap = {
-            "CGL": {"desc":"General Liability","order":1,"default_value":2000000},
-            "CONTENT": {"desc":"Business Content","order":2,"default_value":0},
-            "TOOLS": {"desc":"Value of Tools & Equipment","order":3,"default_value":0},
-            "DATA": {"desc":"Cyber Risk & Data Breach","order":4},
-            "INSTALLATION": {"desc":"Installation Liability","order":5}
-        };
-
         function getQueryParam(name) {
             var match = RegExp(`[&]?${name}=([^&]*)`).exec(window.location.search);
             return match && match[1];
@@ -225,6 +225,8 @@
         this.tools = opts.tools || getQueryParam("TOOLS") || 0;
         this.data = opts["data"] || getQueryParam("DATA") || 0;
         this.installation = opts.installation || getQueryParam("INSTALLATION") || 0;
+        this.errors = opts.errors || getQueryParam("ERRORS") || 0;
+        this.interruption = opts.interruption || getQueryParam("INTERRUPTION") || 0;
 
         this.bizAddr1 = null;
 

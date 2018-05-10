@@ -109,23 +109,7 @@
                         });
                     }
                 });
-                console.log({
-                    type: "single",
-                    grid: true,
-                    grid_snap: true,
-                    values: this.coverages,
-                    from: this.defaultValue,
-                    prefix: "$",
-                    keyboard: true,
-                    onChange: () => {
-                        var value = this.refs.input.value;
-                        // console.log("onChange", value);
-                        this.trigger('input', {
-                            name: this.name,
-                            value: parseInt(value)
-                        });
-                    }
-                });
+                this.refs.input.value = this.defaultValue;
             }
         }
 

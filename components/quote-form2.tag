@@ -21,8 +21,10 @@
             "CGL": {"desc":"General Liability","order":1,"default_value":2000000},
             "CONTENT": {"desc":"Business Content","order":2,"default_value":0},
             "TOOLS": {"desc":"Value of Tools & Equipment","order":3,"default_value":0},
-            "DATA": {"desc":"Cyber Risk & Data Breach","order":4},
-            "INSTALLATION": {"desc":"Installation Liability","order":5}
+            "INTERRUPTION": {"desc": "Business Interruption","order":4 },
+            "ERRORS": {"desc": "Personal Error", "order": 5 },
+            "DATA": {"desc":"Cyber Risk & Data Breach","order":6},
+            "INSTALLATION": {"desc":"Installation Liability","order":7},
         };
 
         this.on('updated', () => {
@@ -73,7 +75,7 @@
             this.coverages = sortByKey(coverages,"order");
             this.update();
 
-            this.rangeSliderChanged(); //ensure that quoteForm.updatePaymenyDisplay is called is at least once
+            this.rangeSliderChanged();
         }
 			
 				function sortByKey(array, key) {
