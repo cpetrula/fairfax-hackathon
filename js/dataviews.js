@@ -212,7 +212,8 @@ var getToolsQuote =  function(primaryName, province, coverage) {
         var pv = mainList[i].province_code;
 
         if (primaryName == pn && pv.includes(province)) {
-            return {quote: mainList[i][coverage_limit], coverageLimit: mainList[i].coverageLimit};}
+            return mainList[i][coverage_limit];
+        }
     }
 }
 
