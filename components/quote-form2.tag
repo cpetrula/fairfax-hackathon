@@ -20,9 +20,9 @@
         this.descrMap = {
             "CGL": {"desc":"General Liability","order":1,"default_value":2000000},
             "CONTENT": {"desc":"Business Content","order":2,"default_value":0},
-            "TOOLS": {"desc":"Tool Liability","order":3,"default_value":0},
-						"DATA": {"desc":"Cyber Risk & Data Breach","order":4},
-						"INSTALLATION": {"desc":"Installation Liability","order":5}
+            "TOOLS": {"desc":"Value of Tools & Equipment","order":3,"default_value":0},
+            "DATA": {"desc":"Cyber Risk & Data Breach","order":4},
+            "INSTALLATION": {"desc":"Installation Liability","order":5}
         };
 
         this.on('updated', () => {
