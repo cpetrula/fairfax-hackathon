@@ -45,6 +45,14 @@
 		})
 		
 		startQuote (result) {
+		    //get primary name here FIRST before  showing form
+			console.log(result);
+			var coverages = getCoveragesForPrimaryName(result.result.parameters.business);
+			if (coverages.length === 0) {
+			    console.log(`no coverages for ${result.result.parameters.business}`)
+				return;
+			}
+
             this.quoteForm2 = riot.mount('#calculator-components','quote-form2',{data:result})[0];
 			entity=result;
 			var params=result.result.parameters;

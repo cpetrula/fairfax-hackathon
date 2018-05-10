@@ -36,7 +36,7 @@
         });
 
         this.on('mount', () => {
-					this.params=opts.data.result.parameters;
+            this.params=opts.data.result.parameters;
 					
             $(this.refs.rev).ionRangeSlider({
                 type: "single",
