@@ -1,26 +1,101 @@
 
+var getMonthlyQuote = function(primaryName, province, revenue, coverages) {
+    var total = 0;
+
+    for (var i = 0; i < coverages.length; i++) {
+        var coverage = coverages[i];
+        if (coverage == "CGL") {
+            total += getCommercialGeneralLiabilityQuote(primaryName, province, revenue);
+        } else if (coverage == "DATA") {
+            total += getCyberLiabilityQuote(primaryName, province, revenue);
+        } else if (coverage == "CONTENT") {
+            total += getBusinessContentQuote(primaryName, province, coverage.coverageAmount);
+        } else if (coverage == "ERRORS") {
+            total += getBusinessErrorsQuote(primaryName, province, coverage.coverageAmount);
+        } else if (coverage == "INSTALLATION") {
+            total += getInstallationQuote(primaryName, province, revenue);
+        } else if (coverage == "TOOLS") {
+            total += getToolsQuote(primaryName, province, revenue, coverage.coverageAmount);
+        } else if (coverage == "INTERRUPTION") {
+            total += getInterruptionCoverage(primaryName, province, revenue);
+        }
+    }
+
+    return total;
+}
+
 var getCoveragesForPrimaryName = function(primaryName) {
     var coverages = [];
     if (_isPrimaryNameInArray(commercial_general_liability, primaryName)) {
-        coverages.push("CGL");
+        var c = {
+            code: "CGL",
+            name: "Coverage Limit",
+            values: [
+                0,2000000,5000000
+            ]
+        }
+        coverages.push(c);
     }
     if (_isPrimaryNameInArray(data_privacy_liability, primaryName)) {
-        coverages.push("DATA");
+        var c = {
+            code: "DATA",
+            name: "Enable Coverage",
+            values: [
+                0,1
+            ]
+        }
+        coverages.push(c);
     }
     if (_isPrimaryNameInArray(business_content_coverage, primaryName)) {
-        coverages.push("CONTENT");
+        var c = {
+            code: "CONTENT",
+            name: "Coverage Limit",
+            values: [
+                0,25000,100000,250000
+            ]
+        }
+        coverages.push(c);
     }
     if (_isPrimaryNameInArray(business_errors_coverage, primaryName)) {
-        coverages.push("ERRORS");
+        var c = {
+            code: "ERRORS",
+            name: "Coverage Limit",
+            values: [
+                0,1000000,2000000
+            ]
+        }
+        coverages.push(c);
     }
     if (_isPrimaryNameInArray(installation_coverage, primaryName)) {
-        coverages.push("INSTALLATION");
+        var c = {
+            code: "INSTALLATION",
+            name: "Enable Coverage",
+            values: [
+                0,1
+            ]
+        }
+        coverages.push(c);
     }
     if (_isPrimaryNameInArray(tools_coverage, primaryName)) {
-        coverages.push("TOOLS");
+        var c = {
+            code: "TOOLS",
+            name: "Coverage Limit",
+            values: [
+                0,25000,50000,100000,250000
+            ]
+        }
+        coverages.push(c);
     }
     if (_isPrimaryNameInArray(business_interruption_coverage, primaryName)) {
         coverages.push("INTERRUPTION");
+        var c = {
+            code: "INTERRUPTION",
+            name: "Enable Coverage",
+            values: [
+                0,1
+            ]
+        }
+        coverages.push(c);
     }
 }
 
@@ -51,11 +126,12 @@ var getBusinessContentQuote =  function(primaryName, province, coverage) {
         var pv = mainList[i].province_code;
 
         if (primaryName == pn && pv.includes(province)) {
-            return {quote: mainList[coverage_limit], coverageLimit: mainList.coverageLimit};}
+            return mainList[coverage_limit];
+        }
     }
 }
 
-var getInterruptionCoverage = function(primaryName, province, revenue, coverage) {
+var getInterruptionCoverage = function(primaryName, province, revenue) {
     var mainList = business_interruption_coverage || []
     var results = getRatesForLiability(mainList, primaryName, province, revenue);
     return (results.length && results[0].quote) || null;
@@ -86,19 +162,19 @@ var getCommercialGeneralLiabilityQuote =  function(primaryName, province, revenu
     return 0;
 }
 
-var getCyberLiabilityQuote =  function(primaryName, province, revenue, coverage) {
+var getCyberLiabilityQuote =  function(primaryName, province, revenue) {
     var mainList = data_privacy_liability || []
     var results = getRatesForLiability(mainList, primaryName, province, revenue);
     return (results.length && results[0].quote) || null;
 }
 
-var getIntallationQuote =  function(primaryName, province, revenue, coverage) {
+var getInstallationQuote =  function(primaryName, province, revenue) {
     var mainList = installation_coverage || []
     var results = getRatesForLiability(mainList, primaryName, province, revenue);
     return (results.length && results[0].quote) || null;
 }
 
-var getBusinessErrorsQuote =  function(primaryName, province, revenue, coverage) {
+var getBusinessErrorsQuote =  function(primaryName, province, coverage) {
     var mainList = business_errors_coverage || []
 
     var coverage_limit = "coverageLimit-UP_TO_1M";
@@ -117,7 +193,7 @@ var getBusinessErrorsQuote =  function(primaryName, province, revenue, coverage)
     }
 }
 
-var getToolsQuote =  function(primaryName, province, revenue, coverage) {
+var getToolsQuote =  function(primaryName, province, coverage) {
     var mainList = tools_coverage || []
 
     var coverage_limit = "coverageLimit-UP_TO_25K";
