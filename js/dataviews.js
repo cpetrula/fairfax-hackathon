@@ -104,7 +104,7 @@ var getCoveragesForPrimaryName = function(primaryName) {
 var _isPrimaryNameInArray = function(arr, primaryName) {
 
     for (var i = 0; i < arr.length; i++) {
-        if (arr[i].primaryName == primaryName) {
+        if (arr[i].primaryName.toLowerCase() == primaryName.toLowerCase()) {
             return true;
         }
     }
@@ -124,10 +124,10 @@ var getBusinessContentQuote =  function(primaryName, province, coverage) {
     }
 
     for (i = 0; i < mainList.length; i++) {
-        var pn = mainList[i].primaryName;
+        var pn = mainList[i].primaryName.toLowerCase();
         var pv = mainList[i].province_code;
 
-        if (primaryName == pn && pv.includes(province)) {
+        if (primaryName.toLowerCase(); == pn && pv.includes(province)) {
             return mainList[i][coverage_limit];
         }
     }
@@ -190,7 +190,7 @@ var getBusinessErrorsQuote =  function(primaryName, province, coverage) {
         var pn = mainList[i].primaryName;
         var pv = mainList[i].province_code;
 
-        if (primaryName == pn && pv.includes(province)) {
+        if (primaryName.toLowerCase() == pn.toLowerCase() && pv.includes(province)) {
             return {quote: mainList[i][coverage_limit], coverageLimit: mainList[i].coverageLimit};}
     }
 }
@@ -211,7 +211,7 @@ var getToolsQuote =  function(primaryName, province, coverage) {
         var pn = mainList[i].primaryName;
         var pv = mainList[i].province_code;
 
-        if (primaryName == pn && pv.includes(province)) {
+        if (primaryName.toLowerCase() == pn.toLowerCase() && pv.includes(province)) {
             return mainList[i][coverage_limit];
         }
     }
@@ -234,7 +234,7 @@ var getRatesForLiability =  function(mainList, primaryName, province, revenue) {
         var pn = mainList[i].primaryName;
         var pv = mainList[i].province_code;
 
-        if (primaryName == pn && pv.includes(province)) {
+        if (primaryName.toLowerCase() == pn.toLowerCase() && pv.includes(province)) {
             var result = {quote: mainList[i][revenue_lookup], coverageLimit: mainList[i].coverageLimit};
             results.push(result);
         }
@@ -260,7 +260,7 @@ var getRatesForLiability =  function(mainList, primaryName, province, revenue) {
         var pn = mainList[i].primaryName;
         var pv = mainList[i].province_code;
 
-        if (primaryName == pn && pv.includes(province)) {
+        if (primaryName.toLowerCase() == pn.toLowerCase() && pv.includes(province)) {
             var result = {quote: mainList[i][revenue_lookup], coverageLimit: mainList[i].coverageLimit};
             results.push(result);
         }
