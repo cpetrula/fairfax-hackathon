@@ -91,7 +91,8 @@ sol.VoiceIntents = (function() {
     var intents = {
         "my.location": myLocation,
 				"site.navigation": navigation,
-				"quote.get":quote
+				"quote.get":quote,
+        "start.over": function() {location.reload(); }
         // "user.interface": userInterface,
         // "cp.print": print,
         // "cp.claims": claims,
