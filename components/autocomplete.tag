@@ -168,7 +168,7 @@
                         this.shownItems = items;
                         this.shown = this.value.length >= this.minLength;
                         this.update();
-                        // console.log("input", this.value, this.shown, this.shownItems);
+                        console.log("input", this.value, this.shown, this.shownItems);
                     })
                     .catch((err) => {
                         console.log("Error searching items", err);
@@ -193,6 +193,7 @@
             this.refs.input.focus();
             this.shownItems = [ item ]; //quick hack
             this.shown = false;
+            sol.Voice.callTextRequest("Show me a quote for " +item.nameCode+" in Ontario");
         }
 
         onItemClicked(evt) {

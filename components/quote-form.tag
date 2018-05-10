@@ -3,7 +3,7 @@
 	<div class="questions-container">
 			<h2>Let's get you some options!</h2>
 			<p class="help-text">Just start typing or use your voice.</p>
-			<autocomplete name="business-type" placeholder="What kind of business do you have?" url="/data/businesses2.json" />
+			<autocomplete name="business-type" placeholder="What kind of business do you have?" url="/data/businesses2.json" />		
 		</div>
 	
 	<div class="calculator-container">
@@ -12,7 +12,7 @@
 				Here is some text that describes what you are seeing and what to do with it.
 			</h3>
 			Business Type: {business}<br />
-			Province: {provinceName}
+			Province: {province}
 		</div>
 		<div id="calculator-components"></div>
 	</div>
@@ -24,21 +24,20 @@
 		<location1></location1>
 	</p>
 	-->
+
 	
 	<div class="payment-container">
 		<span class="monthly-payment-amount"></span> <span class="monthly-payment-text">per month</span>
-		<button id="buy-now-btn" class="btn btn-danger" onclick={showBuyNow}>Buy Now</button>
+		<button id="buy-now-btn" class="btn btn-danger">Buy Now</button>
 	</div>
 	<script>
 		var _this=this;
 		var generalLiabilitySlider;
 		var entity;
-
-
 		this.on('mount', function(){
 			riot.update();
 			$("[name=business-type]",_this.root).on("focus",function() {
-				startQuote();
+				//_this.startQuote();
 			})
 			$("#test-btn").on("click",function() {
 				increaseGeneralLiability();
@@ -46,32 +45,17 @@
 		})
 		
 		startQuote (result) {
-			this.quoteForm2 = riot.mount('#calculator-components','quote-form2',{data:result})[0];
+			riot.mount('#calculator-components','quote-form2',{data:result})
 			entity=result;
 			var params=result.result.parameters;
 		
 			this.business=params.business;
 			this.province=params.Province;
-			var provinceNames =
-                { "BC": "British Columbia" ,
-                 "AB": "Alberta" ,
-                 "SK": "Saskatchewan" ,
-                 "MB": "Manitoba" ,
-                 "ON": "Ontario" ,
-                 "QC": "Quebec" ,
-                 "NB": "New Brunswick" ,
-                 "PE": "Prince Edward Island" ,
-                 "NS": "Nova Scotia" ,
-                 "NL": "Newfoundland and Labrador" ,
-                 "YK": "Yukon" ,
-                 "NT": "Northwest Territories" ,
-                 "NU": "Nunavut" };
-			this.provinceName = provinceNames[this.province];
 			$("#hp-top,#hp-bottom,.questions-container").hide(500);
 			$(".top-bar,.payment-container,.calculator-container",_this.root).show();	
 			this.update();
 		}
-
+			
 		increaseGeneralLiability () {
 			var gls=generalLiabilitySlider;
 			var step=gls.options.step;
@@ -80,19 +64,7 @@
 		}
 		
 		updatePaymentDisplay (payment) {
-		    this.payment = payment;
 			$(".monthly-payment-amount",_this.root).html("$"+payment);
-		}
-
-		showBuyNow() {
-		    var coverages = this.quoteForm2.getValues();
-			// console.log(coverages);
-
-			var query = coverages.map((cov) => `&${cov.code}=${cov.value}`).reduce((a,b) => a + b);
-			var url = "/buynow.html?" + query + "&PRICE=" + this.payment;
-
-			console.log(url);
-			window.location.href = url;
 		}
 	</script>
 	<style scope>

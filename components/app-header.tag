@@ -1,6 +1,6 @@
 <app-header>
     <div class="row">
-        <div class="col"><img class="logo" src="images/logo.png"></div>
+      <div class="col"><a href="index.html"><img class="logo" src="images/logo.png"></a></div>
         <div class="col">
           <!--//
           <span class="fa-layers fa-fw">

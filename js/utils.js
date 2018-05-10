@@ -108,6 +108,51 @@ sol.Utils = (function () {
             }
         });
     }
+    
+    function getGeoLocation () {
+            return fetch('https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyC5oLwQ4kz0841rw4rk-5foOJeCdIiaNQM', {
+                method: 'POST'})
+                .then((resp) => {
+                    if (!resp.ok) {
+                        console.log(resp);
+                        throw new Error("Bad response while getting geo coordinates!")
+                    }
+                    return resp.json();
+                })
+                .then((geo) => {
+                    console.log("Got geo", geo);
+                    var loc = geo.location;
+                    return fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${loc.lat},${loc.lng}&key=AIzaSyC5oLwQ4kz0841rw4rk-5foOJeCdIiaNQM`);
+                })
+                .then((resp) => {
+                    if (!resp.ok) {
+                        console.log(resp);
+                        throw new Error("Bad response while getting province from geo");
+                    }
+
+                    return resp.json();
+                })
+                .then((location) => {
+                    console.log("Successfully automagicked location!", location);
+
+                    var cityResult = location.results.find((result) => {
+                        return result.types.indexOf("administrative_area_level_1") !== -1;
+                    });
+                    var city = cityResult.address_components.find((comp) => {
+                        return comp.types.indexOf("administrative_area_level_1") !== -1;
+                    }).short_name;
+
+                    this.placeId = cityResult.place_id;
+                   return Promise.resolve(city);
+                    
+                })
+                .catch((err) => {
+                    console.log(err);
+                    alert(err);
+                })
+    
+    
+    }
 
     return {
         getObjects:getObjects,
@@ -118,7 +163,8 @@ sol.Utils = (function () {
         formatCurrency:formatCurrency,
         printPage:printPage,
         getTODGreeting:getTODGreeting,
-        sortTable:sortTable
+        sortTable:sortTable,
+        getGeoLocation : getGeoLocation
     }  
 }());
 
