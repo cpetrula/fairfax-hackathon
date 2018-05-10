@@ -5,15 +5,16 @@
 			<p class="help-text">Just start typing or use your voice.</p>
 			<autocomplete name="business-type" placeholder="What kind of business do you have?" url="/data/businesses.json" />		
 		</div>
-
 	
-
 	<div class="calculator-container">
-							<div class="business-info">
+		<div class="business-info">
+			<h3>
+				Here is some text that describes what you are seeing and what to do with it.
+			</h3>
 			Business Type: {business}<br />
 			Province: {province}
 		</div>
-<quote-form2></quote-form2>
+		<div id="calculator-components"></div>
 	</div>
 
 
@@ -44,37 +45,17 @@
 		})
 		
 		startQuote (result) {
+			riot.mount('#calculator-components','quote-form2',{data:result})
 			entity=result;
-			$("#hp-top,#hp-bottom").hide(500);
-			$(".top-bar,.payment-container,.calculator-container",_this.root).show();		
+			var params=result.result.parameters;
+		
+			this.business=params.business;
+			this.province=params.Province;
+			$("#hp-top,#hp-bottom,.questions-container").hide(500);
+			$(".top-bar,.payment-container,.calculator-container",_this.root).show();	
+			this.update();
+		}
 			
-			_this.initializeSliders();
-			_this.setDefaultValues();
-		}
-		
-		initializeSliders () {
-			$("[name=general-liability]").ionRangeSlider({
-					type: "single",
-					grid: true,
-					min: 0,
-					max: 1000000,
-					step: 100000,
-// 					from: 200,
-// 					to: 800,
-					prefix: "$",
-					keyboard: true,
-					onChange: function (data) {
-						//console.log(data);
-						_this.updatePaymentDisplay();
-					},
-					onUpdate: function (data) {
-						//console.log(data);
-						_this.updatePaymentDisplay();
-					}
-			});
-			generalLiabilitySlider = $("[name=general-liability]").data("ionRangeSlider");
-		}
-		
 		increaseGeneralLiability () {
 			var gls=generalLiabilitySlider;
 			var step=gls.options.step;
@@ -82,28 +63,7 @@
 			gls.update({from:currentVal+step});
 		}
 		
-		setDefaultValues () {
-			generalLiabilitySlider.update({from:200000});
-		}
-		
-		calculatePayment () {
-			var payment=0;	
-// 			console.log("calc")
-// 			console.log(generalLiabilitySlider)
-// 			var generalLiabilityCoverage = generalLiabilitySlider.options.from;
-			
-// 			payment=generalLiabilityCoverage*.0002;
-			var business=entity.result.parameters.business;
-			var province=entity.result.parameters.Province;
-			this.business=business;
-			this.province=province;
-			this.update();
-			var c=getCoveragesForPrimaryName(business);
-			payment = getMonthlyQuote(business,province,100000,c);
-			return payment;
-		}
-		updatePaymentDisplay () {
-			var payment=_this.calculatePayment();
+		updatePaymentDisplay (payment) {
 			$(".monthly-payment-amount",_this.root).html("$"+payment);
 		}
 	</script>
@@ -114,6 +74,9 @@
 			margin-top:10px;
 			display:none;
 		}
+		.questions-container {
+				margin:0 50px 10px 50px;
+		}
 		.payment-container {
 			position:fixed;
 			bottom:0;
@@ -122,6 +85,13 @@
 			width:100%;
 			background-color:#e6e6e6;
 			display:none;
+		}
+		.business-info {
+			padding: 10px;
+			background-color: #4d97d6;
+			color:#fff;
+			border-radius: 3px;
+			margin-bottom: 10px;
 		}
 		#buy-now-btn {
 			margin-bottom:10px;

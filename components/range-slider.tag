@@ -1,5 +1,5 @@
 <range-slider>
-    <div>
+    <div class="range-slider-container">
 
         <div if="{this.isBoolean()}">
             <label>
@@ -25,8 +25,11 @@
 
 
     <script>
+			console.log(opts)
+			var _this=this;
         this.label = opts.label || "<nolabel>";
         this.name = opts.name || "";
+				this.default_value = parseInt(opts.default_value);
         this.coverages = opts.coverages || [
             0,100,200
         ];
@@ -78,6 +81,7 @@
                 this.ion = $(this.refs.input).ionRangeSlider({
                     type: "single",
                     grid: true,
+										grid_snap: true,
                     values: this.coverages,
                     prefix: "$",
                     keyboard: true,
@@ -90,6 +94,13 @@
                         });
                     }
                 });
+							this.ion = $(this.refs.input).data("ionRangeSlider");
+							this.ion.update({from:_this.default_value})
+							          this.trigger('input', {
+                            name: this.name,
+                            value: parseInt(_this.defaultValue)
+                        });
+
             }
         }
 
@@ -97,4 +108,9 @@
             return this.coverages.length === 2 && this.coverages[1] === 1;
         }
     </script>
+	<style>
+		.range-slider-container {
+			margin-bottom:20px;
+		}
+	</style>
 </range-slider>

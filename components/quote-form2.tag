@@ -1,67 +1,28 @@
 <quote-form2>
-    <div class="top-bar"></div>
-    <div class="questions-container">
-        <h2>Let's get you some options!</h2>
-        <p class="help-text">Just start typing or use your voice.</p>
-        <input type="text" placeholder="Paste primaryName here" value="Handyman/Handywoman" class="form-control" ref="primaryName"> <button onclick={doUpdate}>Update</button>
-    </div>
-    <div class="container">
-
         <div class="row">
-            <div class="col-md-6" show={coverages[0]}>
+            <div class="col-md-6">
                 <label>Revenue</label>
                 <input name="REV" type="text" ref="rev" value="" />
             </div>
             <div class="col-md-6" each="{cov in coverages}">
-                <range-slider name={cov.code} coverages={cov.values} label={cov.descr}></range-slider>
+                <range-slider name={cov.code} coverages={cov.values} label={cov.descr} default_value={cov.default_value}></range-slider>
             </div>
         </div>
-        <div class="row">
-            <h3>Total: {total}</h3>
-        </div>
-    </div>
-    <br/>
-    <br/>
-    <br/>
 
     <style>
-        .top-bar {
-            border-top:1px solid #555;
-            padding-top:20px;
-            margin-top:10px;
-            display:none;
-        }
-        .payment-container {
-            position:fixed;
-            bottom:0;
-            height:60px;
-            padding:0 50px;
-            width:100%;
-            background-color:#e6e6e6;
-            display:none;
-        }
-        #buy-now-btn {
-            margin-bottom:10px;
-            margin-left:30px;
-        }
-        .monthly-payment-amount {
-            font-size:28pt;
-        }
-        .calculator-container {
-            display:none;
-            padding:0 50px;
-        }
+
+
     </style>
     <script>
         this.coverages = [];
         this.total = 0;
 
         this.descrMap = {
-            "CGL": "General Liability",
-            "DATA": "Cyber Risk & Data Breach",
-            "CONTENT": "Business Content",
-            "INSTALLATION": "Installation Liability",
-            "TOOLS": "Tool Liability"
+            "CGL": {"desc":"General Liability","order":1,"default_value":2000000},
+            "CONTENT": {"desc":"Business Content","order":2,"default_value":0},
+            "TOOLS": {"desc":"Tool Liability","order":3,"default_value":0},
+						"DATA": {"desc":"Cyber Risk & Data Breach","order":4},
+						"INSTALLATION": {"desc":"Installation Liability","order":5}
         };
 
         this.on('updated', () => {
@@ -73,6 +34,8 @@
         });
 
         this.on('mount', () => {
+					this.params=opts.data.result.parameters;
+					
             $(this.refs.rev).ionRangeSlider({
                 type: "single",
                 grid: true,
@@ -80,6 +43,7 @@
                 max: 500000,
                 prefix: "$",
                 keyboard: true,
+								from:200000,
                 step: 10000,
                 onChange: () => {
                     this.rangeSliderChanged({
@@ -88,22 +52,45 @@
                     })
                 }
             });
+					this.doUpdate();
         });
 
-        doUpdate(evt) {
-            var primaryName = this.refs.primaryName.value;
+        doUpdate() {
+            var primaryName = this.params.business;
             var coverages = getCoveragesForPrimaryName(primaryName);
             if (coverages.length === 0) {
                 alert("No coverages for " + primaryName);
                 return;
             }
-
+						console.log(coverages)
             coverages.forEach((cov) => {
-                cov.descr = this.descrMap[cov.code];
+                cov.descr = this.descrMap[cov.code].desc;
+								cov.order = this.descrMap[cov.code].order;
+								cov.default_value = this.descrMap[cov.code].default_value || 0;
             });
-
-            this.coverages = coverages;
+						
+						
+            this.coverages = sortByKey(coverages,"order");
+						this.update();
         }
+			
+				function sortByKey(array, key) {
+					return array.sort(function(a, b) {
+							var x = a[key];
+							var y = b[key];
+
+							if (typeof x == "string")
+							{
+									x = (""+x).toLowerCase(); 
+							}
+							if (typeof y == "string")
+							{
+									y = (""+y).toLowerCase();
+							}
+
+							return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+					});
+				}
 
         rangeSliderChanged(data) {
             // console.log(data);
@@ -122,8 +109,8 @@
             var revenue = parseInt(this.refs.rev.value);
 
             // console.log(revenue, enabledCoverages);
-            var quote = getMonthlyQuote(this.refs.primaryName.value, "BC", revenue, enabledCoverages);
-            console.log(quote);
+            var quote = getMonthlyQuote(this.params.business, this.params.Province, revenue, enabledCoverages);
+            window.sol.tagIdMap["quote-form"].updatePaymentDisplay(quote);
         }
     </script>
 </quote-form2>

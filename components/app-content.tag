@@ -4,7 +4,6 @@
 				<hp-top></hp-top>
 			</div>
 			<quote-form id="quote-form"></quote-form>
-		    <!-- <quote-form2></quote-form2> -->
 			<div id="hp-bottom">
 				<hp-bottom></hp-bottom>
 			</div>
@@ -14,8 +13,8 @@
         .help-text {
             font-size:16pt;
         }
-        .questions-container {
-            margin:0 50px 50px 50px;
-        }
+			#hp-bottom {
+				padding-top:40px;
+			}
     </style>
 </app-content>
