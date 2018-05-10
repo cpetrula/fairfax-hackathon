@@ -7,21 +7,25 @@
                 <div class="card-body">
                     <p class="price"><span>{formatMoney(price)}</span></p>
                     <table>
-                        <tr>
+                        <tr if={cgl > 0}>
                             <td>General Liability:</td>
-                            <td>{formatMoney(genLiability)}</td>
+                            <td>{formatMoney(cgl)}</td>
                         </tr>
-                        <tr>
-                            <td>Property & Casualty:</td>
-                            <td>{formatMoney(propCasualty)}</td>
+                        <tr if={content > 0}>
+                            <td>Business Content:</td>
+                            <td>{formatMoney(content)}</td>
                         </tr>
-                        <tr>
-                            <td>Professional Liability:</td>
-                            <td>{formatMoney(profLiability)}</td>
+                        <tr if={tools > 0}>
+                            <td>Value of Tools & Equipment:</td>
+                            <td>{formatMoney(tools)}</td>
                         </tr>
-                        <tr>
+                        <tr if={data > 0}>
                             <td>Cyber Risk & Data Breach:</td>
-                            <td>{formatMoney(dataBreach)}</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr if={installation > 0}>
+                            <td>Installation Liability</td>
+                            <td>Yes</td>
                         </tr>
                     </table>
                 </div>
@@ -201,11 +205,26 @@
         }
     </style>
     <script>
-        this.price = 120.0
-        this.genLiability = 250000
-        this.propCasualty = 120000
-        this.profLiability = 120000
-        this.dataBreach = 0
+
+        this.descrMap = {
+            "CGL": {"desc":"General Liability","order":1,"default_value":2000000},
+            "CONTENT": {"desc":"Business Content","order":2,"default_value":0},
+            "TOOLS": {"desc":"Value of Tools & Equipment","order":3,"default_value":0},
+            "DATA": {"desc":"Cyber Risk & Data Breach","order":4},
+            "INSTALLATION": {"desc":"Installation Liability","order":5}
+        };
+
+        function getQueryParam(name) {
+            var match = RegExp(`[&]?${name}=([^&]*)`).exec(window.location.search);
+            return match && match[1];
+        }
+
+        this.price = opts.price || getQueryParam("PRICE") || 0;
+        this.cgl = opts.cgl || getQueryParam("CGL") || 0;
+        this.content = opts.content || getQueryParam("CONTENT") || 0;
+        this.tools = opts.tools || getQueryParam("TOOLS") || 0;
+        this.data = opts["data"] || getQueryParam("DATA") || 0;
+        this.installation = opts.installation || getQueryParam("INSTALLATION") || 0;
 
         this.bizAddr1 = null;
 

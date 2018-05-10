@@ -112,5 +112,23 @@
             var quote = getMonthlyQuote(this.params.business, this.params.Province, revenue, enabledCoverages);
             window.sol.tagIdMap["quote-form"].updatePaymentDisplay(quote);
         }
+
+        getValues() {
+            var revenue = parseInt(this.refs.rev.value);
+            var coverages =
+                this.tags["range-slider"]
+                    .map((slider) => {
+                        return {
+                            code: slider.name,
+                            value: slider.getValue()
+                        }
+                    });
+            coverages.push({
+                code: "REV",
+                value: revenue
+            });
+
+            return coverages;
+        }
     </script>
 </quote-form2>
