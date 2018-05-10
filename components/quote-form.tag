@@ -58,7 +58,7 @@
 			var params=result.result.parameters;
 		
 			this.business=params.business;
-			this.province=params.ProvinceName;
+			this.province=params.Province;
 			var provinceNames =
 				{ "BC": "British Columbia" ,
 				"AB": "Alberta" ,
