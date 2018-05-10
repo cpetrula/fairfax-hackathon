@@ -7,6 +7,14 @@
         <div class="row">
             <location-select class="col-md-4" name="business-province" />
         </div>
+        <div class="row">
+        </div>
+        <div class="row">
+
+        </div>
+        <div class="row">
+
+        </div>
     </div>
 
 

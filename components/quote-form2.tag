@@ -52,7 +52,7 @@
                     })
                 }
             });
-					this.doUpdate();
+            this.doUpdate();
         });
 
         doUpdate() {
@@ -62,16 +62,18 @@
                 alert("No coverages for " + primaryName);
                 return;
             }
-						console.log(coverages)
+            console.log(coverages)
             coverages.forEach((cov) => {
                 cov.descr = this.descrMap[cov.code].desc;
-								cov.order = this.descrMap[cov.code].order;
-								cov.default_value = this.descrMap[cov.code].default_value || 0;
+                cov.order = this.descrMap[cov.code].order;
+                cov.default_value = this.descrMap[cov.code].default_value || 0;
             });
 						
 						
             this.coverages = sortByKey(coverages,"order");
-						this.update();
+            this.update();
+
+            this.rangeSliderChanged(); //ensure that quoteForm.updatePaymenyDisplay is called is at least once
         }
 			
 				function sortByKey(array, key) {
