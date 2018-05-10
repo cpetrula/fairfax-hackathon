@@ -103,17 +103,17 @@ sol.VoiceIntents = (function() {
             var coverage_type = params["Coverage_type"];
             var coverage_direction = params["Coverage_direction"];
             if (coverage_type == "INSTALLATION" || coverage_type == "DATA") {
+                var radio_button_up = $("input[name='" + coverage_type + "'][ref='yes']");
+                var radio_button_down = $("input[name='" + coverage_type + "'][ref='no']");
+
                 if (coverage_direction == 1 || coverage_direction == "up") {
-                    var radio_button = $("input[name='" + coverage_type + "'][ref='yes']");
-                    if (radio_button) {
-                        radio_button.attr('checked', true);
-                    }
-                } else if (coverage_direction == 1 || coverage_direction == "up") {
-                    var radio_button = $("input[name='" + coverage_type + "'][ref='no']");
-                    if (radio_button) {
-                        radio_button.attr('checked', true);
-                    }
+                    radio_button_down && radio_button_down.removeAttr('checked');
+                    radio_button_up && radio_button_up.attr('checked', 'checked');
+                } else if (coverage_direction == 0 || coverage_direction == "down") {
+                    radio_button_up && radio_button_up.removeAttr('checked');
+                    radio_button_down && radio_button_down.attr('checked', 'checked');
                 }
+                quoteForm2.rangeSliderChanged();
             } else {
                 if (coverage_direction == 1 || coverage_direction == "up") {
                     quoteForm2.getSliderByName(coverage_type).increaseRangeValue();
