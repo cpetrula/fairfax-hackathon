@@ -33,7 +33,11 @@
 	<script>
 		var _this=this;
 		var generalLiabilitySlider;
+		_this.myTest = function () {
+			alert("test")
+		}
 		this.on('mount', function(){
+			riot.update();
 			$("[name=business-type]",_this.root).on("focus",function() {
 				startQuote();
 			})
@@ -42,15 +46,15 @@
 			})
 		})
 		
-		function startQuote () {
+		startQuote () {
 			$("#hp-top,#hp-bottom").hide(500);
 			$(".top-bar,.payment-container,.calculator-container",_this.root).show();		
 			
-			initializeSliders();
-			setDefaultValues();
+			_this.initializeSliders();
+			_this.setDefaultValues();
 		}
 		
-		function initializeSliders () {
+		initializeSliders () {
 			$("[name=general-liability]").ionRangeSlider({
 					type: "single",
 					grid: true,
@@ -63,28 +67,28 @@
 					keyboard: true,
 					onChange: function (data) {
 						//console.log(data);
-						updatePaymentDisplay();
+						_this.updatePaymentDisplay();
 					},
 					onUpdate: function (data) {
 						//console.log(data);
-						updatePaymentDisplay();
+						_this.updatePaymentDisplay();
 					}
 			});
 			generalLiabilitySlider = $("[name=general-liability]").data("ionRangeSlider");
 		}
 		
-		function increaseGeneralLiability () {
+		increaseGeneralLiability () {
 			var gls=generalLiabilitySlider;
 			var step=gls.options.step;
 			var currentVal=gls.options.from;
 			gls.update({from:currentVal+step});
 		}
 		
-		function setDefaultValues () {
+		setDefaultValues () {
 			generalLiabilitySlider.update({from:200000});
 		}
 		
-		function calculatePayment () {
+		calculatePayment () {
 			var payment=0;	
 			console.log("calc")
 			console.log(generalLiabilitySlider)
@@ -93,7 +97,7 @@
 			payment=generalLiabilityCoverage*.0002;
 			return payment;
 		}
-		function updatePaymentDisplay () {
+		updatePaymentDisplay () {
 			var payment=calculatePayment();
 			$(".monthly-payment-amount",_this.root).html("$"+payment);
 		}

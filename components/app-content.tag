@@ -3,11 +3,12 @@
 			<div id="hp-top">
 				<hp-top></hp-top>
 			</div>
-			<quote-form></quote-form>
+			<quote-form id="quote-form"></quote-form>
 			<div id="hp-bottom">
 				<hp-bottom></hp-bottom>
 			</div>
     </div>
+	
     <style scope>
         .help-text {
             font-size:16pt;

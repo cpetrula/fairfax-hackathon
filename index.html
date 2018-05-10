@@ -31,6 +31,7 @@
 				<script src="libs/apiai/ApiAi.min.js"></script>
 				<script src="js/Voice.js"></script>
 				<script src="js/VoiceIntents.js"></script>
+				<script src="js/dataviews.js"></script>
         <script src="js-resources/Resources.js"></script>
         <script src="js/main.js"></script>
     </head>
@@ -48,9 +49,23 @@
 		<script type="riot/tag" src="components/hp-top.tag"></script>
 		<script type="riot/tag" src="components/hp-bottom.tag"></script>
 		<script type="riot/tag" src="components/quote-form.tag"></script>
+		<script type="riot/tag" src="components/autocomplete.tag"></script>
     <script>
+			window.sol = window.sol || {};
+			var FindMyTagMixin = {
+				init: function (opts) {
+					this.on('mount',() => {
+						window.sol.tagIdMap = window.sol.tagIdMap || {};
+						var id = opts.id || this.root.getAttribute("id");
+						if (id) {
+							window.sol.tagIdMap[id] = this;
+						}
+					})
+				}
+			}
       riot.compile(function() {
-        riot.mount('*')
+				riot.mixin(FindMyTagMixin);
+        window.sol.tags=riot.mount('*')
         route.start(true)
       })
       sol.Main.init();

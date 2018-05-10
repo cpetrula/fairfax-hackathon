@@ -72,10 +72,10 @@
             font-size:92pt;
         }
         div.card-icon .fa-circle {
-            color:#666 !important;
+            color:#4d97d6 !important;
         }
         div.card-icon .fa-inverse {
-            color:#e6e6e6 !important;
+            color:#fff !important;
         }
         .btn-warning {
           color: #212529;

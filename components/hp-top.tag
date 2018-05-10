@@ -1,15 +1,34 @@
 <hp-top>
 	<div class="jumbotron jumbotron-fluid">
 		<div class="container">
-			<h1 class="display-4">Small Business Insurance</h1>
-			<p class="lead">Property & Casualty - General Liability - Professional Liability - Cyber Risk & Data Breach</p>
+			<h2>Insurance made easy for any small business</h2>
+			<p class="lead">You work hard for your business and insurance shouldn't make it harder! </p>
+			<p class="lead">
+				<i class="fas fa-microphone"></i>
+				Voice commands allow you to get a quote within seconds.
+				<br /><span class="lead example">Example: Say "Show me the minimum coverage for &lt;business type&gt; in &lt;province&gt;</span>
+			</p>
 		</div>
 	</div>
 	<style>
   	@media (min-width: 576px) {
-    	jumbotron {
-      	padding: 3rem 2rem !important;
+    	.jumbotron {
+      	padding: 2rem 2rem !important;
+				background-color:#4d97d6 !important;
+				color:#fff;
        }
+			.example {
+				font-style:italic;
+				color:#e6e6e6;
+			}
+			h2 {
+				font-size:30pt;
+			}
+			.container .fa-microphone {
+				float:left;
+				font-size:36pt;
+				margin-right:10px;
+			}
     }
 	</style>
 </hp-top>

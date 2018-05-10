@@ -2,10 +2,11 @@ var sol=sol || {};
 sol.VoiceIntents = (function() {
     var fontSize=100;
     var search = function (response) {
+				console.log("search response from dialog flow")
         console.log(response);
         if (response.status.code===200) {
             var intentName=response.result.metadata.intentName;
-            intents[intentName](response) || null;
+          	intents[intentName](response) || null;
         }
     }
     var userInterface = function (response) {
@@ -103,6 +104,17 @@ sol.VoiceIntents = (function() {
         var params = response.result.parameteres;
         console.log(params);
     }
+		
+		var navigation = function (response) {
+			var params = response.result.paramaters;
+			
+		}
+		var quote = function (response) {
+			var params = response.result.paramaters;
+			console.log("quote function")
+			console.log(response);
+			window.sol.tagIdMap["quote-form"].startQuote();
+		}
     /*
     var claims = function (response) {
         var params=response.result.parameters;
@@ -126,7 +138,9 @@ sol.VoiceIntents = (function() {
     }
     */
     var intents = {
-        "my.location": myLocation
+        "my.location": myLocation,
+				"site.navigation": navigation,
+				"quote.get":quote
         // "user.interface": userInterface,
         // "cp.print": print,
         // "cp.claims": claims,

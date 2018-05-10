@@ -322,7 +322,7 @@ var getInitialQuotes =  function(primaryName, province, revenue) {
     }
 
     var results = [];
-    var mainList = (comemercial_general_liability["CoverageRate_CGL.xlsx"] && gpl_data["CoverageRate_CGL.xlsx"]["Sheet1"]) || []
+    var mainList = (commercial_general_liability["CoverageRate_CGL.xlsx"] && gpl_data["CoverageRate_CGL.xlsx"]["Sheet1"]) || []
     for (i = 0; i < mainList.length; i++) {
         var pn = mainList[i].primaryName;
         var pv = mainList[i].province_code;
