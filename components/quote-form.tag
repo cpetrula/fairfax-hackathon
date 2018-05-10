@@ -114,7 +114,7 @@
 			this.province=province;
 			this.update();
 			var c=getCoveragesForPrimaryName(business);
-			getMonthlyQuote(business,province,100000,c);
+			payment = getMonthlyQuote(business,province,100000,c);
 			return payment;
 		}
 		updatePaymentDisplay () {
