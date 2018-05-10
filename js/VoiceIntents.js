@@ -104,12 +104,12 @@ sol.VoiceIntents = (function() {
             var coverage_direction = params["Coverage_direction"];
             if (coverage_type == "INSTALLATION" || coverage_type == "DATA") {
                 if (coverage_direction == 1 || coverage_direction == "up") {
-                    var radio_button = $("input[name='" + coverage_type + "][ref='yes']");
+                    var radio_button = $("input[name='" + coverage_type + "'][ref='yes']");
                     if (radio_button) {
                         radio_button.attr('checked', true);
                     }
                 } else if (coverage_direction == 1 || coverage_direction == "up") {
-                    var radio_button = $("input[name='" + coverage_type + "][ref='no']");
+                    var radio_button = $("input[name='" + coverage_type + "'][ref='no']");
                     if (radio_button) {
                         radio_button.attr('checked', true);
                     }
