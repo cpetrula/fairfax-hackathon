@@ -5,7 +5,7 @@ var getMonthlyQuote = function(primaryName, province, revenue, coverages) {
     for (var i = 0; i < coverages.length; i++) {
         var coverage = coverages[i];
         if (coverage.code === "CGL") {
-            total += getCommercialGeneralLiabilityQuote(primaryName, province, revenue);
+            total += getCommercialGeneralLiabilityQuote(primaryName, province, revenue, coverage.coverageAmount);
         } else if (coverage.code === "DATA") {
             total += getCyberLiabilityQuote(primaryName, province, revenue);
         } else if (coverage.code === "CONTENT") {
@@ -15,7 +15,7 @@ var getMonthlyQuote = function(primaryName, province, revenue, coverages) {
         } else if (coverage.code === "INSTALLATION") {
             total += getInstallationQuote(primaryName, province, revenue);
         } else if (coverage.code === "TOOLS") {
-            total += getToolsQuote(primaryName, province, revenue, coverage.coverageAmount);
+            total += getToolsQuote(primaryName, province, coverage.coverageAmount);
         } else if (coverage.code === "INTERRUPTION") {
             total += getInterruptionCoverage(primaryName, province, revenue);
         }
