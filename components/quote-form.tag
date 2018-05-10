@@ -132,6 +132,26 @@
 			margin-bottom:10px;
 			margin-left:30px;
 		}
+
+		.tooltip .arrow {
+			color:#e6e6e6 !important;
+		}
+		.tooltip-inner {
+			max-width: 200px;
+			padding: 3px 8px;
+			color: #666 !important;
+			text-align: center;
+			background-color: #e6e6e6 !important;
+			border-radius: .25rem;
+		}
+		.tooltip.bs-tether-element-attached-right .tooltip-inner::before, .tooltip.tooltip-left .tooltip-inner::before {
+			top: 50%;
+			right: 0;
+			margin-top: -5px;
+			content: "";
+			border-width: 5px 0 5px 5px;
+			border-color: #555 !important;
+		}
 		.monthly-payment-amount {
 			font-size:28pt;
 		}
