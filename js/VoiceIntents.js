@@ -100,9 +100,9 @@ sol.VoiceIntents = (function() {
             var quoteForm2 = quoteForm.quoteForm2;
 
             // params.con
-            if (params["direction"] == 1 ||params["direction"] == "up") {
+            if (params["Coverage_direction1"] == 1 ||params["Coverage_direction1"] == "up") {
                 quoteForm2.getSliderByName(params["Coverage_type"]).increaseRangeValue();
-            } else if (params["direction"] == 0 ||params["direction"] == "down") {
+            } else if (params["Coverage_direction1"] == 0 ||params["Coverage_direction1"] == "down") {
                 quoteForm2.getSliderByName(params["Coverage_type"]).decreaseRangeValue();
             }
         }
