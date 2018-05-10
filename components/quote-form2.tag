@@ -103,7 +103,7 @@
                         }
                     }).filter((con) => {
                         console.log(con);
-                        return con.coverageAmount > 0
+                        return con.coverageAmount > 0 || con.code == "TOOLS" || con.code == "CONTENT"
                     });
 
             var revenue = parseInt(this.refs.rev.value);

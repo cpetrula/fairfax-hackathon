@@ -5,7 +5,7 @@ var getMonthlyQuote = function(primaryName, province, revenue, coverages) {
     for (var i = 0; i < coverages.length; i++) {
         var coverage = coverages[i];
         if (coverage.code === "CGL") {
-            total += getCommercialGeneralLiabilityQuote(primaryName, province, revenue, coverage.coverageAmount);
+            total += getCommercialGeneralLiabilityQuote(primaryName, province, revenue);
         } else if (coverage.code === "DATA") {
             total += getCyberLiabilityQuote(primaryName, province, revenue);
         } else if (coverage.code === "CONTENT") {
@@ -116,7 +116,7 @@ var getBusinessContentQuote =  function(primaryName, province, coverage) {
 
     var coverage_limit = "coverageLimit-UP_TO_25K";
     if (coverage <= 25000) {
-        coverage_limit = "coverageLimit-UP_TO_50K";
+        coverage_limit = "coverageLimit-UP_TO_25    K";
     } else if (coverage <= 100000) {
         coverage_limit = "coverageLimit-UP_TO_100K";
     } else if (coverage <= 250000) {
