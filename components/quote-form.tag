@@ -116,6 +116,23 @@
 			display:none;
 			padding:0 50px;
 		}
+    @media (max-width: 420px) {
+      .payment-container {
+        padding:0 10px;
+      }
+      .monthly-payment-amount {
+			font-size:24pt;
+		  }
+      .questions-container {
+        margin:0 20px;
+      }
+            div.questions-container  h2 {
+        font-size:13pt !important;
+      }
+      .help-text {
+        display:none !important;
+      }
+    }
 
 	</style>
 </quote-form>
