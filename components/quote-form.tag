@@ -11,7 +11,9 @@
 		<!--
 			<autocomplete name="business-name" placeholder="What is your business name?" remote-url="https://maps.googleapis.com/maps/api/place/autocomplete/json?key=AIzaSyBhjVl_50JNJBzOEGUuxY7tZY0E1tn7ll0&radius=100&type=establishment&location=43.6565353,-79.6010313&input=" />
 			-->
-
+		<div class="business-info">
+			
+		</div>
 		<div class="row">
 			<div class="col-md-6">
 				<range-slider id="gen" label="General Liability" name="gen"></range-slider>
@@ -44,9 +46,7 @@
 	<script>
 		var _this=this;
 		var generalLiabilitySlider;
-		_this.myTest = function () {
-			alert("test")
-		}
+		var entity;
 		this.on('mount', function(){
 			riot.update();
 			$("[name=business-type]",_this.root).on("focus",function() {
@@ -57,7 +57,8 @@
 			})
 		})
 		
-		startQuote () {
+		startQuote (result) {
+			entity=result
 			$("#hp-top,#hp-bottom").hide(500);
 			$(".top-bar,.payment-container,.calculator-container",_this.root).show();		
 			
@@ -101,15 +102,18 @@
 		
 		calculatePayment () {
 			var payment=0;	
-			console.log("calc")
-			console.log(generalLiabilitySlider)
-			var generalLiabilityCoverage = generalLiabilitySlider.options.from;
+// 			console.log("calc")
+// 			console.log(generalLiabilitySlider)
+// 			var generalLiabilityCoverage = generalLiabilitySlider.options.from;
 			
-			payment=generalLiabilityCoverage*.0002;
+// 			payment=generalLiabilityCoverage*.0002;
+			var business=entity.result.parameters.business;
+			var c=getCoveragesForPrimaryName(business);
+			getMonthlyQuote("Drywaller","ON",100000,c)
 			return payment;
 		}
 		updatePaymentDisplay () {
-			var payment=calculatePayment();
+			var payment=_this.calculatePayment();
 			$(".monthly-payment-amount",_this.root).html("$"+payment);
 		}
 	</script>
