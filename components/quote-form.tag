@@ -8,15 +8,15 @@
 	
 	<div class="calculator-container">
 		<div class="business-info">
-			<h3>
+			<p>
 				Take a moment to review the coverage details below and change any slider simply with your voice!  If you are satisfied with the recommended amounts, click or say "Buy now" or say "Talk to an agent" for more assistance.
-			</h3>
+      </p>
+      <hr />
 			Business Type: {business}<br />
 			Province: {province}
 		</div>
 		<div id="calculator-components"></div>
 	</div>
-
 
 	<!--
 	<p style="max-width: 500px" class="questions-container">

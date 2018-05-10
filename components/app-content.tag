@@ -16,5 +16,8 @@
 			#hp-bottom {
 				padding-top:40px;
 			}
+      .content-container {
+        margin-bottom:60px;
+      }
     </style>
 </app-content>
